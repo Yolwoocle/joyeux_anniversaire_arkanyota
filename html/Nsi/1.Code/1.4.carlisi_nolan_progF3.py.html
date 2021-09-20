@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Titre de la page</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<style>
+		body{
+			background-color: black;
+			color: white;
+		}
+	</style>
+		
+</head>
+<body>
+<p>#!/usr/bin/env python</p>
+
+<h1 id="vim:setsw4sts4etfdmmarker:">vim: set sw=4 sts=4 et fdm=marker:</h1>
+
+<p>#┎━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+#┃ Nom: Carlisi, Prenom: Nolan, Classe: TG 04 ┃
+#┃ Creation: 20/09/2021 16:08:20    ┃
+#┃ Mise a jour: 20/09/2021 16:13:20   ┃
+#┃ Fichier: 1.4.carlisi_nolan_progF3.py  ┃
+#┃ Exercice fiche 3 Exo 1 à 10    ┃
+#┖━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</p>
+
+<p>def Exo1(): # {{{1
+m = int(input(&quot;L&#8217;entier m : &quot;))
+n = int(input(&quot;L&#8217;entier n : &quot;))
+return list(range(n+1, m))</p>
+
+<p>def Exo2(): # {{{1
+pass</p>
+
+<p>def Exo3(): # {{{1
+pass</p>
+
+<p>def Espacement(n): # {{{1
+print(&#8220;=================&#8221;)
+print(f&quot;Exo {n}\n&quot;)</p>
+
+<p>if <strong>name</strong> == &#8220;<strong>main</strong>&#8221;: # {{{1
+import sys
+Exos = [Exo1, Exo2, Exo3] # , Exo4, Exo5, Exo6, Exo7, Exo8, Exo9, Exo10, Exo11]
+# Si il y&#8217;a un argument dans l&#8217;execution
+if len(sys.argv) == 1 or (not sys.argv[1].isdigit()):
+for index,i in enumerate(Exos):
+Espacement(index+1)
+retour = i()
+if retour != None:
+print(retour)
+else:
+Espacement(sys.argv[1])
+retour = Exos<a href="">int(sys.argv[1])-1</a>
+if retour != None:
+print(retour)</p>
+
+<pre><code>print(&quot;C'est la fin&quot;)
+</code></pre>
+
+</body>
+</html>
