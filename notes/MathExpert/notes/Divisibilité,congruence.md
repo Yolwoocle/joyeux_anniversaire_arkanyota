@@ -1,7 +1,7 @@
 ---
 title: 'Divisibilité, congruence'
 created: '2021-09-08T12:26:49.531Z'
-modified: '2021-09-10T13:46:14.858Z'
+modified: '2021-09-15T13:01:42.502Z'
 ---
 
 #  Divisibilité, congruence
@@ -66,4 +66,86 @@ $k'k \in \Z$, donc $a|c$
 
 ---
 Prof: 
-a,b et n étant 2 entiers monterer que si n|a et n|b alors n|(a+b)
+$a \in \Z^*, b \in \Z^*$ Montrer que si $a|b$ et $b|a$ alors $|a| = |b|$
+
+On considère 2 entiers a  et b non null tels que $a|b$ et $b|a$ 
+On a alors 
+$\exist k \in \Z, b = ka$
+$\exist k' \in \Z, a = k'b$
+
+on a alors $a = k'*ka = kk'a$
+$kk'a - a = 0$
+$(kk'-1) * a = 0$
+$kk'-1= 0$ ou $a =0$
+
+
+On sait que $a \neq 0$
+in a donc $kk' = 1$
+
+k et k' sont des diviseur de 1, ils ne peuvent prendre pour valeur que 1 ou -1
+
+si $k=1$: $b=a$
+si $k=-1$: $b= -a$
+
+$a \in \Z^*, b \in \Z^*, a|b\text{ et }b|a \Rightarrow |a| = |b|$
+
+---
+## II) Ensemble $n\Z$
+
+n n'etant un entier, on note $n\Z$ l'ensemble des multiples de n.
+$n\Z = \{ kn, k\in\Z\}$
+De façon immédiate, si $a \in n\Z$, alors $\exist k \in \Z, a = kn \Leftrightarrow n|a$
+$a|n\Z \Leftrightarrow n|a$
+
+Stabilité:
+
+Si $a \in n\Z$ <=> $n|a$ <=> $\exist k \in \Z$, a = kn
+Si $b \in n\Z$ <=> $n|b$ <=> $\exist k' \in \Z$, b = k'n
+
+on a alors
+a+b = kn+k'n = (k+k')n
+Donc a+b \in n\Z
+
+Cela s'écrit de 2 façon differentes
+
+$$
+n|a\; et\; n|b \Rightarrow n|(a+b) \\
+a \in n\Z \text{ et } b \in n\Z \Rightarrow  a+b \in n\Z
+$$
+
+SI $a \in n\Z$ et $k \in \Z$
+
+$\exist k' \in \Z$, a $k'n$ donc
+
+$ka = kk'$ donc $ka \in n\Z$
+
+Cela s'écrit de deux daçons differantes
+
+
+$$
+n|a\; et\; k\in Z \Rightarrow n|ka \\
+a \in n\Z \text{ et } b \in \Z \Rightarrow  ka \in n\Z
+$$
+
+Combinaison linéaire
+
+a et b etant 2 entier tout entier de la forme ka + k'b, à k \in \Z et k'\in \Z, est une combinaision linéaire de a et b
+
+---
+
+si $a\in n\Z, b\in n\Z, k \in \Z, k' \in \Z$ alors $ka + k'b \in n\Z$
+
+$n\Z$ est stable par combinaison linéaire
+Cela s'écrit aussi:
+$n|a, n|b, k\in\Z, k'\in\Z \Rightarrow n|(ka+k'b)$
+$a\in\Z^*,b \in \Z^*$
+$a|b \Leftrightarrow b\Z \sub a\Z$
+
+Preuve:
+Soit $n\in k\Z$, alors $b|n$ or $a|b$, donc par **transitivité** $a|n \Rightarrow n \in a\Z$ 
+Ceci étant vrai pout tout n de $k\Z$, on a donc $b\Z \sub a\Z$
+
+*Réciproque:*
+Si $b\Z \sub a\Z$
+Or $b \in b\Z$, donc $b\in a\Z$, donc $a|b$
+
