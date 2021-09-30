@@ -195,6 +195,190 @@ Ceci étant vrai pout tout n de <span class="math">\(k\Z\)</span>, on a donc <sp
 Si <span class="math">\(b\Z \sub a\Z\)</span>
 Or <span class="math">\(b \in b\Z\)</span>, donc <span class="math">\(b\in a\Z\)</span>, donc <span class="math">\(a|b\)</span></p>
 
+<hr />
+
+<h2 id="ivdivisioneuclidienne">IV Division euclidienne</h2>
+
+<p>Soit <span class="math">\(a \in \Z\)</span>, et <span class="math">\(b \in \Z^*\)</span></p>
+
+<p>Il exsiste un unique couple d&#8217;entiers (q; r) tel que</p>
+
+<h2 id="abqr0leqrleqb">| <span class="math">\(a = bq+r; 0 \leq r \leq |b|\)</span></h2>
+
+<p>Cette relation s&#8217;appelle la <u>dicision euclidienne(ou division entière) de a par b</u></p>
+
+<ul>
+<li>q s&#8217;appelle le <u>le quotient entier</u> a par b</li>
+<li>r s&#8217;appelle le <u>le reste modulo b</u></li>
+</ul>
+
+<h5 id="preuve">Preuve</h5>
+
+<p>Preuve: les intervalles d&#8217;entiers de la forme <span class="math">\([[ k|b|; (k+1)|b| [[\)</span> formenet un partition de <span class="math">\(\Z\)</span>, avec <span class="math">\(k \in \Z\)</span></p>
+
+<p>Cala signifie que leurs intersections deux a deux sont vide, et que leur union est égal à <span class="math">\(\Z\)</span></p>
+
+<p>Par conséquent, a appartient à un seul de ces intervalles, que l&#8217;on notera <span class="math">\([[q|b|; (q+1)|b|[[\)</span>
+On a donc <span class="math">\(q|b| \leq a &lt; (q+1)|b|\)</span></p>
+
+<p>Possons <span class="math">\(r = a - q|b|\)</span>, on a alors <span class="math">\(a - q|b| \geq 0\)</span> et <span class="math">\(a-q|b| &lt; |b|\)</span></p>
+
+<p>Donc <span class="math">\(0 \leq r &lt; |b|\)</span></p>
+
+<h5 id="unicité:">Unicité:</h5>
+
+<p>On a <span class="math">\(a=bq+r\)</span>, avec <span class="math">\(0 \leq r &lt; |b|\)</span>
+S&#8217;il exssite un autre couple <span class="math">\((q',r')\)</span> tel que <span class="math">\(a = bq'+r'\)</span> avec <span class="math">\(0\leq r' &lt; |b|\)</span></p>
+
+<p>on a <span class="math">\(r = a-bq\)</span> et <span class="math">\(r'=a-bq'\)</span></p>
+
+<p>Donc <span class="math">\(r-r' = a-bq-a+bq' = b(q'-q)\)</span></p>
+
+<p><span class="math">\(q'-q \in \Z\)</span>
+Si <span class="math">\(q'-q \geq 1\)</span></p>
+
+<p>on a <span class="math">\(0 \leq r &lt; |b|\)</span>
+donc <span class="math">\(-|b| \leq -r' &lt; 0\)</span>
+donc <span class="math">\(-|b| \leq r-r' &lt; |b|\)</span></p>
+
+<p>On a <span class="math">\(q'-q \in \Z\)</span>
+si
+<span class="math">\[q'-q \geq 1 \Rightarrow  |b|*(q'-q) \geq |b| \\
+\Rightarrow  |r-r'| \geq |b|\]</span></p>
+
+<p>imposible par hypothèse</p>
+
+<p>si
+<span class="math">\[q'-q \leq 1 \Rightarrow  |b|*(q'-q) \leq - |b| \\
+\Rightarrow  -|r-r'| \leq - |b|
+\Rightarrow  |r-r'| \geq |b|\]</span></p>
+
+<p>donc <span class="math">\(q'-q = 0 \Rightarrow q'=q\)</span></p>
+
+<p>or <span class="math">\(r-r' = b(q'-q) = 0 \Rightarrow r=r'\)</span></p>
+
+<p>Il y a donc unicité de la division euclidienne</p>
+
+<h2 id="vcongruence">V) Congruence</h2>
+
+<h3 id="1défninition">1) Défninition</h3>
+
+<p>Deux entiers a et b sont <u>congures modulo</u> n <span class="math">\((n \in \N)\)</span> si leur differences est un multiple de n.
+on écrit alors <span class="math">\(a \equiv b(n)\)</span></p>
+
+<h2 id="aequivbnleftrightarrowb-ainnzleftrightarrownb-a">| <span class="math">\(a \equiv b(n) \Leftrightarrow b-a \in n\Z \\ \Leftrightarrow n|b-a\)</span></h2>
+
+<p>Conséqance: tout entier a est congrue à son reste modulo n</p>
+
+<p>En enffet, la division euclidienne de a par n s&#8217;écrit</p>
+
+<p><span class="math">\(a = nq+r\)</span> <span class="math">\(0 \leq r &lt; n\)</span>
+<span class="math">\(a-r = nq\)</span></p>
+
+<p>donc <span class="math">\(n | a-r \Leftrightarrow a \equiv r(n)\)</span></p>
+
+<h3 id="2propriétés">2) Propriétés</h3>
+
+<h2 id="siainzaequivanlarelationestréflexive">| Si <span class="math">\(a \in \Z, a \equiv a(n)\)</span> (la relation est réflexive)</h2>
+
+<p><span class="math">\(a - a = 0 = 0 \times n\)</span></p>
+
+<p>donc <span class="math">\(n|a-a \Rightarrow a \equiv a(n)\)</span></p>
+
+<h2 id="aetbétant2entierssiaequivbnalorsbequivbequivanlarelationestsymétrique">a et b étant 2 entiers,
+| si <span class="math">\(a \equiv b(n)\)</span> alors <span class="math">\(b \equiv b \equiv a(n)\)</span> (la relation est symétrique)</h2>
+
+<p>Preuve: <span class="math">\(a \equiv b(n) \Rightarrow n | b-a\)</span>
+<span class="math">\(\Rightarrow n | (b-a) \times (-1)\)</span>
+<span class="math">\(\Rightarrow n | a-b\)</span></p>
+
+<p><span class="math">\(\Rightarrow a \equiv a(n)\)</span></p>
+
+<h2 id="siabetc3entierssiaequivbnetbequivcnalorsaequivcnlarelationesttransitive">Si a, b et c, 3 entiers
+| si <span class="math">\(a \equiv b(n)\)</span> et <span class="math">\(b \equiv c(n)\)</span> alors <span class="math">\(a \equiv c(n)\)</span> (la relation est transitive)</h2>
+
+<p>Preuve:
+<span class="math">\(a \equiv b(n) \Rightarrow n | b-a\)</span>
+<span class="math">\(b \equiv c(n) \Rightarrow n | c-b\)</span></p>
+
+<p>Alors <span class="math">\(n| (b-a) + (c-b)\)</span>
+<span class="math">\(\Rightarrow n | (c-a)\)</span>
+<span class="math">\(\Rightarrow n | a \equiv c(n)\)</span></p>
+
+<p><strong><u>Compatibilité avec l&#8217;addition</u></strong></p>
+
+<p>Si a, b, a', b' sont 4 entiers</p>
+
+<p><span class="math">\[a \equiv b(n) \Rightarrow \\
+a' \equiv b'(n) \Rightarrow \\
+\\
+a + a' \equiv b + b'(n)\]</span></p>
+
+<p>Preuve:</p>
+
+<p><span class="math">\(a \equiv b(n) \Rightarrow n | b-a\}\)</span>
+<span class="math">\(a' \equiv b'(n) \Rightarrow n | b'-a'\}\)</span></p>
+
+<p><span class="math">\(\Rightarrow n | (b-a)+(b'-a')\)</span>
+<span class="math">\(\Rightarrow n | (b-b')-(a+a')\)</span></p>
+
+<p><span class="math">\(\Rightarrow a+a' \equiv b + b'(n)\)</span>
+Alors <span class="math">\(a + a' \equiv b + b'(n)\)</span></p>
+
+<p><strong><u>Compatibilité avec la multiplication</u></strong></p>
+
+<p>Si a, b et c sont 3 entiers</p>
+
+<p>Si
+<span class="math">\[a \equiv b(n) \; alors \; ac \equiv bc(n)\]</span></p>
+
+<p>Preuve:</p>
+
+<p><span class="math">\(a \equiv b(n) \Rightarrow n | b-a\)</span></p>
+
+<p><span class="math">\(\Rightarrow \exist k \in \Z, b-a = nk\)</span>
+<span class="math">\(\Rightarrow c(b-a)=nkc\)</span>
+<span class="math">\(\Rightarrow bc-ac = n \times (kc)\)</span>
+<span class="math">\(\Rightarrow n|bc-ac\)</span>
+<span class="math">\(\Rightarrow ac\equiv bc(n)\)</span></p>
+
+<h2 id="parconséquentababetant4entierssiaequivbnetaequivbnalorsaaequivbbn">Par conséquent, a, b, a', b' etant 4 entiers
+| si <span class="math">\(a \equiv b(n)\)</span> et <span class="math">\(a' \equiv b'(n) \;alors\; aa' \equiv bb'(n)\)</span></h2>
+
+<p>Preuve:</p>
+
+<p><span class="math">\(a \equiv b(n) \Rightarrow aa' \equiv ba'(n)\)</span>
+<span class="math">\(a' \equiv b'(n) \Rightarrow ba' \equiv bb'(n)\)</span>
+Donc par transitivité, <span class="math">\(aa' \equiv bb'(n)\)</span></p>
+
+<p>Conséquence: a et b étant 2 entiers et <span class="math">\(p \in \N\)</span></p>
+
+<h2 id="siaequivbnalorsapequivbpn">| Si <span class="math">\(a \equiv b(n) alors a^p \equiv b^p(n)\)</span></h2>
+
+<p>Preuve par récurence</p>
+
+<p><span class="math">\(P(p); a^p \ equiv b^p(n)\)</span></p>
+
+<p>Init: p = 0</p>
+
+<p><span class="math">\(a^0 = 1\)</span>, <span class="math">\(b^0 =1\)</span> donc
+<span class="math">\(1 \equiv 1(n) \; donc\; a^0 \equiv b^0(n)\)</span></p>
+
+<p>P(0) est vrai</p>
+
+<p>Hérédité</p>
+
+<p><span class="math">\(P_n \Rightarrow a^p \equiv b^p(n)\)</span>
+or <span class="math">\(a \equiv b(n)\)</span>, donc
+<span class="math">\(a^p * a \equiv b^p * b(n)\)</span>
+Donc : <span class="math">\(a^{p+1} \equiv b^{p+1}(n),\)</span> donc <span class="math">\(P_{p+1} vraie\)</span></p>
+
+<p>Conclusion : <span class="math">\(\forall p \in \N, a^p \equiv b^p(n)\)</span></p>
+
+<p>Remarque:</p>
+
+<h2 id="aequiv0nleftrightarrowna">| <span class="math">\(a \equiv 0(n) \Leftrightarrow n|a\)</span></h2>
+
 </body>
 </html>
 

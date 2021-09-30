@@ -29,64 +29,374 @@
 	</script>
 </head>
 <body>
-<h1 id="exosdeuxsciecledenergie">ExosDeuxsciecledenergie</h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Dérivées</title>
+	<meta name="created" content="'2021-09-21T06:56:41.054Z'"/>
+	<meta name="modified" content="'2021-09-29T07:54:21.149Z'"/>
+</head>
+<body>
 
-<h2 id="3comprendrelecoursp121">3 Comprendre le cours p121</h2>
+<h1 id="dérivées_connexité">Dérivées_Connexité</h1>
 
-<p>1)a) C&#8217;est l&#8217;alternateur
-b)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<h2 id="icomposéde2fonctions">I) Composé de 2 fonctions</h2>
 
-<p><span class="math">\(n = E_{elec}/E_{méca} = 1,3/1,4 = 13/14 = 0,93\)</span></p>
+<p>[&#8230;]</p>
 
-<h2 id="abiciclettep123">A biciclette p123</h2>
+<hr />
 
-<p>1a) 1=rotor
-2= stator
-2) rotor generge un chant magétique, et le stator le transfome en electicité
-3) Le rotot tourne et le stator est statique</p>
+<p><span class="math">\(u(x) = x²+3x+4\)</span>: fonction polynome de degré 2</p>
 
-<p>2a)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<p><span class="math">\(v(x) = \sqrt(x)\)</span>
+<span class="math">\(D_u\)</span>: ensemble de définition: <span class="math">\(d_u=\R\)</span>
+<span class="math">\(D_v\)</span>: ensemble de définition de v: <span class="math">\(d_v=\R+ = [0; +\infin[\)</span></p>
 
-<p>b) Que le gain est de 0,4 et donc la perte est de 60%
-c) faire bouger le rotor et verifier si il y&#8217;a de l&#8217;lectricité au bornes avec un led</p>
+<p>a) calculer v(u(1))</p>
 
-<h2 id="activité4:">Activité 4:</h2>
+<p>D&#8217;abord u(1)= puis v(u(1) = v(9) = \sqrt{8} = 2\sqrt{2}</p>
 
-<p>Paragraphe argumentée:</p>
+<p>b) Déterminer le signe de u(x):</p>
 
-<p>On préfèrera choisir comme semi-conducteur le silicuim, car en premier
-il est beaucoup présant da la nature à l&#8217;état naturel et en
-deuxieme il à un fort rendement maximal de conversion</p>
+<p>signe de <span class="math">\(x² + 3x + 4\)</span>: On <span class="math">\(a: a=1; b=3; c=4\)</span>, On calcule <span class="math">\(\Delta = b² - 4ac = 3²-4*1*1 = 9-16 = -7\)</span>
+<span class="math">\(\Delta = -7\)</span></p>
 
-<p>En première partie sa forte abondance dans les éléments chimique
-dans la croûte terrestre, presque 30% d&#8217;abondance par rapport
-au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%</p>
+<p>Conséquance? L&#8217;équation n&#8217;admet pas de solution
+Resutlat: <span class="math">\(\forall x \in \R, u(x) = x² + 3x+4\)</span> a le même signe que <span class="math">\(a=1\)</span></p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui
-est de 30% presque à égalité à l&#8217;Arsénuire de gallium,
-et 2x plus que le Germanuim à 15%, mais aussi son absorbsion
-relativement proche de spectre solaire(spectre visible),</p>
+<p>Donc: <span class="math">\(\forall x \in \R, 0&lt;u(x)\)</span></p>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur
-CARLISI Nolan TG04</p>
+<p>c) Pour <span class="math">\(x \in \R\)</span>, on peut donc calculer <span class="math">\(v(u(x))\)</span>
+<span class="math">\(v(u(x))\)</span> : Comment la calculer Dans l&#8217;expression <span class="math">\(v(x) = \sqrt x\)</span>, on remplace x par u(x), on obtent alos:</p>
 
-<p>Paragraphe argumenté Activité 4 :</p>
+<p><span class="math">\(v(u(x)) = \sqrt{u(x)} =\sqrt{x²+3x+4}\)</span></p>
 
-<p>On regardera en premier, l’abondance du silicuim à l’état naturel puis en seconde partie son randement maximal de conversion.</p>
+<p>La fonction obtenue, f, définie pour <span class="math">\(x \in \R\)</span>, par:
+<span class="math">\(f(x) = \sqrt{x²+3x+4}\)</span> est appelée composée de u suivie de v et se note v: <span class="math">\(v \circ u\)</span></p>
 
-<p>En première partie sa forte abondance dans les éléments chimique dans la croûte terrestre, presque 30% d&#8217;abondance par rapport au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%.</p>
+<p>N°=2)</p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui est de 30% presque à égalité à l&#8217;Arsénuire de gallium, et 2x plus que le Germanuim à 15%, mais aussi son absorption relativement proche de spectre solaire(spectre visible) entre 400 et 1000nm.</p>
+<p><span class="math">\(u(x)= exp(x) = e^x; v(x) = x²-1\)</span>: Reprendre les questions de l&#8217;ex 1</p>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur grace à sa forte abondance dans la croute terrestre, et son haut randement maximal de conversion.</p>
+<p>Rappels: exp: designe la fonction exponentielle</p>
+
+<p><span class="math">\(e \in \R, exp(1) = e\)</span></p>
+
+<hr />
+
+<h2 id="expestdefinesurrpourttxinr0exe⁰1e¹epourainrbinreabeaebe-afrac1eaea-bfraceaebeanean">| <span class="math">\(exp\)</span> est define sur <span class="math">\(\R\)</span>
+| pour tt x \in \R, <span class="math">\(0&lt; e^x\)</span>
+| <span class="math">\(e⁰ = 1; e¹ = e\)</span>
+| Pour <span class="math">\(a \in \R, b \in \R\)</span>,
+| <span class="math">\(e^{a+b} = e^a * e^b,\\ e^{-a} = \frac{1}{e^a} \\e^{a-b} = \frac{e^a}{e^b} \(e^a)^{n} = e^{a*n}\)</span></h2>
+
+<p>exp est dérivable sur \R
+et pour x \in \R, <span class="math">\((exp)'(x) = exp(x)\)</span> en particulier exp est strictement croissancet sur <span class="math">\(\R\)</span></p>
+
+<p><span class="math">\(u(x)\)</span> est definie sur <span class="math">\(\R\)</span></p>
+
+<p>a) <span class="math">\(v(u(1))\)</span> D&#8217;abord <span class="math">\(u(1) = e¹ = e\)</span> puis <span class="math">\(v(e)=e² -1\)</span>: <span class="math">\(v(u(1))= e² -1\)</span>
+b) <span class="math">\(D_u = \R\)</span> , <span class="math">\(D_v = \R\)</span>; v étant un polynome de degré 2:
+c) Pour <span class="math">\(x \in \R, u(x) \in \R\)</span> et la fonction x est définir sur <span class="math">\(\R\)</span>
+on peut donc calculer <span class="math">\(v(u(x))\)</span>
+<span class="math">\(v(u(x)) = v(e^x) = (e^x)^2 -1 = e^{2x} -1\)</span></p>
+
+<p>BILAN: pour <span class="math">\(x \in \R\)</span>, <span class="math">\((v \circ u)(x) = e^{2x} - 1\)</span></p>
+
+<p>d) pour x \in \R:
+<span class="math">\((v \circ u)(x) = u(x(v)) = u(x²-1) = e^{x²-1}\)</span></p>
+
+<p>e) on a: <span class="math">\((u \circ v)(1) = e^{1^2-1}= e⁰ = 1\)</span></p>
+
+<p>soit <span class="math">\(u(v(1)) = 1\)</span></p>
+
+<p>Les 2 nombres: <span class="math">\(e^2 -1\)</span> et <span class="math">\(1\)</span> sont differents donc <span class="math">\((v \circ u)(1) \neq (u \circ v)(1)\)</span></p>
+
+<hr />
+
+<h2 id=":warning:attention:engénéralles2fonctionsvcircunequcircv">| :warning: Attention: en général les 2 fonctions <span class="math">\(v \circ u \neq u \circ v\)</span></h2>
+
+<h4 id="2définitionetnotation">2) Définition et Notation</h4>
+
+<p>Soit <span class="math">\(u\)</span> une fonction définie sur un intervalle <span class="math">\(I\)</span> (1)
+et <span class="math">\(v\)</span> une fonction définie sur un intervalle <span class="math">\(J\)</span> (2)
+telle que:
+<span class="math">\(\forall x \in I, u(x) \in J\)</span> (3)</p>
+
+<p>La fonction définie sur l&#8217;intervalle <span class="math">\(I\)</span> par: pour <span class="math">\(x \in I, f(x) = v(u(x))\)</span> est appelée: fonction composée de la fonction <span class="math">\(u\)</span> suivie de la fonction <span class="math">\(v\)</span>.
+Et se note <span class="math">\(f = v \circ u\)</span></p>
+
+<p>Shema de base pour comprendre la définition:</p>
+
+<p>[&#8230;] (1)</p>
+
+<h4 id="3danslapratique">3) Dans la pratique</h4>
+
+<p>Dans certain cas, on devra décomposer, une fonction <span class="math">\(f\)</span> donnée sous la forme <span class="math">\(v \circ u\)</span> en précisant les fonction <span class="math">\(u\)</span> et <span class="math">\(v\)</span></p>
+
+<p>Dans les exemples suivants, on ne se préocupe pas des ensembles de définitions.</p>
+
+<p>N°1)
+<span class="math">\(f(x) = \sqrt{3x^4+x^2+2}\)</span></p>
+
+<p>on pose <span class="math">\(u = 3x^4+x^2+2\)</span> et <span class="math">\(v = \sqrt{x}\)</span>
+On a <span class="math">\(f(x) = \sqrt{u(x)} = v(u(x)) = (v \circ u)(x)\)</span></p>
+
+<p>Ainsi <span class="math">\(f = v \circ u\)</span></p>
+
+<p>N°2)</p>
+
+<p><span class="math">\(f(x) = e^{\frac{3x}{x-1}}\)</span></p>
+
+<p>On pose <span class="math">\(u(x) = \frac{3x}{x-1}\)</span> et <span class="math">\(v(x) = e^{x}\)</span></p>
+
+<p>On a <span class="math">\(f(x) = e^{u(x)} = v(u(x))\)</span></p>
+
+<p>Ainsi <span class="math">\(f = v \circ u\)</span>, <span class="math">\(D_f = \R -\{1\}\)</span></p>
+
+<h4 id="4dérivéedunecomposée">4) Dérivée d&#8217;une composée</h4>
+
+<h5 id="athéorème:">a) Théorème:</h5>
+
+<h2 id="soituunefontiondérivablesurunintervallei">| Soit <span class="math">\(u\)</span> une fontion dérivable sur un intervalle <span class="math">\(I\)</span></h2>
+
+<p>| Soit <span class="math">\(v\)</span> une fontion dérivable sur un intervalle <span class="math">\(J\)</span>
+| tellesque: pour tout <span class="math">\(x \in I, v(x) \in J\)</span>
+| On a: <span class="math">\(v \circ u\)</span> est dérivable sur <span class="math">\(I\)</span>
+| ET pour tout <span class="math">\(x \in I\)</span>, <span class="math">\((v \circ v)'(x)\)</span>
+| Se note <span class="math">\((v \circ u)' = (v' \circ u) * u'\)</span></p>
+
+<p>N°1:
+<span class="math">\(f(x) = \sqrt{3x^4+x^2+2}\)</span></p>
+
+<p>on a <span class="math">\(u(x) = 3x^4+x^2+2\)</span> , u est dérivable sur <span class="math">\(I = \R\)</span></p>
+
+<p>Et <span class="math">\(\forall x \in \R, u'(x) = 3*4x³ +2x= 12x³+2x\)</span></p>
+
+<p>Puis <span class="math">\(v(x) = \sqrt{x}\)</span> , v est dérivable sur <span class="math">\(J = ]0+\infin[\)</span></p>
+
+<p>Et pour <span class="math">\(x \in ]0; \infin[, v'(x) = \frac{1}{2\sqrt x}\)</span></p>
+
+<p>Puis il faut vérifier que:</p>
+
+<p>pour <span class="math">\(x \in \R\)</span>, <span class="math">\(u(x) \in ]0; \infin[\)</span>
+En effet, pour <span class="math">\(x \in R\)</span>, <span class="math">\(3x⁴+x²+2 \geq 2 &gt;0\)</span></p>
+
+<p><u>Que dit le théorème précédant?</u></p>
+
+<p><span class="math">\(f = v \circ u\)</span> est dérivable sur <span class="math">\(I = \R\)</span> et
+pour <span class="math">\(x \in \R, f'(x) = v'(u(x))*u'(x)\)</span></p>
+
+<p>or <span class="math">\(u'(x) = 12x³+2x\)</span> et <span class="math">\(v'(x) = \frac{1}{\sqrt x}\)</span>
+donc, <span class="math">\(v'(u(x)) = \frac{1}{2 \sqrt{u(x)}} = \frac{1}{2 \sqrt{3x⁴+x²+2}}\)</span></p>
+
+<p>Puis <span class="math">\(f'(x) = \frac{12x³+2x}{2\sqrt{3x⁴+x²+2}} = \frac{x(6x²+1)}{\sqrt{3x⁴+x²+2}}\)</span></p>
+
+<p>On peut établir le tableau des varations de f
+Signe de <span class="math">\(f'(x)\)</span> est le même que <span class="math">\(x\)</span></p>
+
+<p>Exemple:
+oOn a: <span class="math">\(u(x) = \frac{3x}{x-1}\)</span></p>
+
+<p>u est une fonction rationelle, c&#8217;est a dire. quoitient de 2 fractions polynomes.</p>
+
+<p><span class="math">\(I = D_u = \R/{1} = ]-oo; 1[ \cup ]1; +oo[\)</span></p>
+
+<p>u est dérivble sur I</p>
+
+<p>pour <span class="math">\(x \in I\)</span>, <span class="math">\([...]\)</span></p>
+
+<hr />
+
+<p><span class="math">\(f(x) = exp(3x/(x-1)) = e^{\frac{3x}{x-1}}\)</span>
+on pose <span class="math">\(u(x) = 3x/(x-1)\)</span></p>
+
+<p>u est dérivable sur <span class="math">\(I = ]-\infin; 1[\cap]A;+\infin[\)</span></p>
+
+<p>et pour <span class="math">\(x \in u'(x) = \frac{3(x-1)- 3x*1}{(x-1)^2}= \frac{3x-3- 3x}{(x-1)^2}\)</span></p>
+
+<h2 id="uxfrac-3x-12">| <span class="math">\(u'(x) = \frac{-3}{(x-1)^2}\)</span></h2>
+
+<p>on pose <span class="math">\(v(x) = e^x\)</span>
+<span class="math">\(v\)</span> est dérivable sur <span class="math">\(J = \R\)</span></p>
+
+<p>et pour <span class="math">\(x \in \R, v'(x) = e^x\)</span></p>
+
+<p>On verifie que:
+pour tout <span class="math">\(x \in I\)</span>, <span class="math">\(u(x) \in J\)</span> Soit pour tout <span class="math">\(x \in ]-\infin; 1[\cap]A;+\infin[\)</span> = <span class="math">\(u(x) \in \R\)</span></p>
+
+<p>Que dit le théorème précédant?</p>
+
+<p>La fonction <span class="math">\(f = v \circ u\)</span> est dérivable sur <span class="math">\(I\)</span>
+et pour <span class="math">\(x \in I\)</span></p>
+
+<p>| <span class="math">\(f'(x) = v'(u(x))\)</span></p>
+
+<p>Soit <span class="math">\(f'(x) = exp(3x/x-1) * -3/(x-1)^2\)</span></p>
+
+<p>Bilan</p>
+
+<h2 id="f">| <span class="math">\(f()\)</span></h2>
+
+<p>[&#8230;] (Photo telephone avant le 28.09 surement le 27.09)</p>
+
+<hr />
+
+<h4 id="5casparticulierduthéorèmeprécédant">5) CAS PARTICULIER, Du théorème précédant</h4>
+
+<p><span class="math">\(u\)</span> désigne une fonction dérivable sur un intervalle <span class="math">\(I\)</span></p>
+
+<p>Premier cas: <span class="math">\(f = e^u = exp(u)\)</span>
+D&#8217;abort pour <span class="math">\(x \in I\)</span>, <span class="math">\(f(x) = e^{u(x)} = exp(u(x))\)</span>
+Etude de la dérivabilité de <span class="math">\(f\)</span>:</p>
+
+<p>On décompose <span class="math">\(f\)</span> comme une composée de 2 fonctions:</p>
+
+<p>on pose <span class="math">\(v = exp\)</span>
+on a pour <span class="math">\(x \in I, f(x) = exp(u(x)) = v(u(x))\)</span>
+Donc <span class="math">\(f = v \circ u\)</span></p>
+
+<p>On a:
+(1): <span class="math">\(u\)</span> dérivable sur un intervalle <span class="math">\(I\)</span>
+(2): <span class="math">\(v\)</span> dérivable sur un intervalle <span class="math">\(J = \R\)</span>
+(3): pour tout <span class="math">\(x \in  I, u(x) \in J\)</span></p>
+
+<p>D&#8217;apres le théoreme énonce au paragraphe 4:</p>
+
+<p><span class="math">\(f = v \circ u\)</span> est dérivable sur <span class="math">\(I\)</span></p>
+
+<p>Et pour <span class="math">\(x \in, f'(x) = v'(u(x)) * u'(x)\)</span></p>
+
+<p>on a <span class="math">\(v'(x) = (\exp)'(x) = e^x\)</span></p>
+
+<p>Ainsi: pour <span class="math">\(x \in I\)</span>, <span class="math">\(f'(x) = \exp(u(x)) * u'(x) = u'(x)*e^{u(x)}\)</span></p>
+
+<h2 id="propriété:uestunefonctiondérivablesurlintervallei">| Propriété: <span class="math">\(u\)</span> est une fonction dérivable sur l&#8217;intervalle <span class="math">\(I\)</span></h2>
+
+<p>| on a: <span class="math">\(e^u\)</span> dérivable sur <span class="math">\(I\)</span> Et <span class="math">\((e^{u})' = u'e^u\)</span></p>
+
+<p>exemple:</p>
+
+<p><span class="math">\(f(x) = e^{2x^2-3x+4}\)</span></p>
+
+<p>étudier la dérivabilité de <span class="math">\(f\)</span></p>
+
+<p>Je pose <span class="math">\(u(x) = 2x²-3x+4\)</span>
+<span class="math">\(u\)</span> est dérivable sur <span class="math">\(I = \R\)</span>
+on a <span class="math">\(f = e^{u}\)</span>
+Par propriété <span class="math">\(f\)</span> est dérivable sur <span class="math">\(I = \R\)</span> et pour <span class="math">\(x \in \R, f'(x) = 2x²-3x+4\)</span></p>
+
+<p><span class="math">\(f'(x) = (4x-3)*e\)</span></p>
+
+<p><strong>Deuxième cas</strong>: <span class="math">\(f = \sqrt{u}\)</span></p>
+
+<p><span class="math">\(u\)</span> est strictement positive et dérivable sur <span class="math">\(I\)</span></p>
+
+<p>On pose <span class="math">\(v(x) = \sqrt(x)\)</span> on a <span class="math">\(f v \circ o\)</span>
+on peux affirmer , par application du théorème précédant du paragraphe 4 que:</p>
+
+<p>Propriété:
+<span class="math">\(u\)</span> est une fonction strictement positive et dérivable sur <span class="math">\(I\)</span></p>
+
+<p>on a : <span class="math">\(\sqrt{u}\)</span> est dérivable sur <span class="math">\(I\)</span></p>
+
+<p>ET : <span class="math">\((\sqrt{u})' = \frac{1}{2\sqrt u} \times u' =\frac{u'}{2\sqrt u}\)</span></p>
+
+<p>exemple: <span class="math">\(f(x) = \sqrt{2x-2}\)</span></p>
+
+<p>Je pose <span class="math">\(u(x) = 3x-2\)</span></p>
+
+<p>Signe de <span class="math">\(u(x) = 3x-2\)</span></p>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> x </th>
+	<th> &#8211;oo  2/3  =oo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>  </td>
+	<td>Signe - / + de a</td>
+</tr>
+<tr>
+	<td> 3x-2 </td>
+	<td> - 0  +</td>
+</tr>
+</tbody>
+</table>
+
+<p>a = 3</p>
+
+<p>u est dérivable et strictement positive sur <span class="math">\(I = ]2/3; +\infin[\)</span>
+S&#8217;apres la proprité</p>
+
+<p><span class="math">\(f = \sqrt{u}\)</span> est dérivable sur I</p>
+
+<h2 id="et:fxfracux2sqrtuxfrac32sqrt3x-2">| ET : <span class="math">\(f'(x) = \frac{u'(x)}{2\sqrt{u(x)}} = \frac{3}{2\sqrt{3x-2}}\)</span></h2>
+
+<p>Troisieme cas:
+<span class="math">\(f = u^n\)</span></p>
+
+<p><span class="math">\(n \in \N^*\)</span></p>
+
+<p><span class="math">\(u\)</span> est un fonction dérivable sur un intervalle <span class="math">\(I\)</span> on pose <span class="math">\(v(x) = x^n\)</span>
+ON peux affirmer, par l&#8217;application du théorème précédant du paragraphe 4 que:</p>
+
+<p>Propriété:</p>
+
+<p><span class="math">\(u\)</span> est une fonction sur un onstervalle <span class="math">\(I\)</span></p>
+
+<p>On a <span class="math">\(u^n\)</span> est dérivable sur <span class="math">\(I\)</span></p>
+
+<h2 id="et:unnun-1timesu">| ET : <span class="math">\((u^n)' = nu(n-1) \times u'\)</span></h2>
+
+<p>exemple; <span class="math">\(f(x) = (x²-2x)⁴, \;\;;  I=\R\)</span></p>
+
+<p>On pose <span class="math">\(u(x) = x^2-2x\)</span>
+On a <span class="math">\(f = u^4\)</span>
+u est dérivable sur <span class="math">\(I=\R\)</span>
+Donc par propriété <span class="math">\(f=u^4\)</span> est dérivable sur <span class="math">\(I = \R\)</span></p>
+
+<p>Et pour <span class="math">\(x \in \R, f'(x) = 4x(x²-2x)*(2x-2)\)</span></p>
+
+<h2 id="fx42x-2x²-2x³">| <span class="math">\(f'(x) = 4(2x-2)(x²-2x)³\)</span></h2>
+
+<p>La formule précédante se généralise au cas ou n est un entier négatif, <strong>mais</strong> il faut supposer en plus que <span class="math">\(u\)</span> ne s&#8217;annule pas sur <span class="math">\(I\)</span>.</p>
+
+<hr />
+
+<h3 id="paragraphe2:dérivéessuccessives"><strong>Paragraphe 2:</strong> Dérivées successives</h3>
+
+<h4 id="1dérivéesseconde:">1) Dérivées seconde:</h4>
+
+<h5 id="adéfinition:">a) Définition:</h5>
+
+<p>Soit f une fonction dérivable, telle que <span class="math">\(f'\)</span> et aussi dérivable sur le même intervalle <span class="math">\(I\)</span>
+La fonction dérivée de <span class="math">\(f'\)</span>, notes <span class="math">\((f')'= f''\)</span> est appelées <u>dérivée seconde</u> de <span class="math">\(f\)</span></p>
+
+<h5 id="bpropriété:">b) Propriété:</h5>
+
+<p>Le signe de <span class="math">\(f''\)</span> sur l&#8217;intervalle I rensigne sur le sens: le sens de varations de <span class="math">\(f''\)</span> sur l&#8217;intervalle <span class="math">\(I\)</span></p>
+
+<p>Exemple: <span class="math">\(f(x) = 2x^3-3x^2+5x+7, I= \R\)</span></p>
+
+<p>Calculer <span class="math">\(f''(x)\)</span></p>
+
+<p><span class="math">\(x \in \R, f'(x) = 6x² -6x +5\)</span>
+<span class="math">\(f''(x) = 12x-6\)</span></p>
+
+</body>
+</html>
+
 
 </body>
 </html>
