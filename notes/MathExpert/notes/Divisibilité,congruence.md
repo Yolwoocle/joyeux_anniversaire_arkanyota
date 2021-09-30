@@ -149,3 +149,193 @@ Ceci étant vrai pout tout n de $k\Z$, on a donc $b\Z \sub a\Z$
 Si $b\Z \sub a\Z$
 Or $b \in b\Z$, donc $b\in a\Z$, donc $a|b$
 
+---
+
+## IV Division euclidienne
+
+Soit $a \in \Z$, et $b \in \Z^*$
+
+Il exsiste un unique couple d'entiers (q; r) tel que 
+
+| $a = bq+r; 0 \leq r \leq |b|$
+---
+
+Cette relation s'appelle la <u>dicision euclidienne(ou division entière) de a par b</u>
+- q s'appelle le <u>le quotient entier</u> a par b
+- r s'appelle le <u>le reste modulo b</u>
+
+##### Preuve
+
+Preuve: les intervalles d'entiers de la forme $[[ k|b|; (k+1)|b| [[$ formenet un partition de $\Z$, avec $k \in \Z$
+
+Cala signifie que leurs intersections deux a deux sont vide, et que leur union est égal à $\Z$
+
+Par conséquent, a appartient à un seul de ces intervalles, que l'on notera $[[q|b|; (q+1)|b|[[$
+On a donc $q|b| \leq a < (q+1)|b|$
+
+
+Possons $r = a - q|b|$, on a alors $a - q|b| \geq 0$ et $a-q|b| < |b|$
+
+Donc $0 \leq r < |b|$
+
+##### Unicité: 
+
+On a $a=bq+r$, avec $0 \leq r < |b|$
+S'il exssite un autre couple $(q',r')$ tel que $a = bq'+r'$ avec $0\leq r' < |b|$
+
+on a $r = a-bq$ et $r'=a-bq'$
+
+Donc $r-r' = a-bq-a+bq' = b(q'-q)$
+
+$q'-q \in \Z$
+Si $q'-q \geq 1$
+
+on a $0 \leq r < |b|$ 
+donc  $-|b| \leq -r' < 0$ 
+donc  $-|b| \leq r-r' < |b|$ 
+
+On a $q'-q \in \Z$
+si 
+$$q'-q \geq 1 \Rightarrow  |b|*(q'-q) \geq |b| \\
+ \Rightarrow  |r-r'| \geq |b|$$
+
+imposible par hypothèse
+
+si
+$$q'-q \leq 1 \Rightarrow  |b|*(q'-q) \leq - |b| \\
+ \Rightarrow  -|r-r'| \leq - |b|
+ \Rightarrow  |r-r'| \geq |b|$$
+
+donc $q'-q = 0 \Rightarrow q'=q$
+
+or $r-r' = b(q'-q) = 0 \Rightarrow r=r'$
+
+Il y a donc unicité de la division euclidienne
+
+## V) Congruence
+
+### 1) Défninition
+
+Deux entiers a et b sont <u>congures modulo</u> n $(n \in \N)$ si leur differences est un multiple de n.
+on écrit alors $a \equiv b(n)$
+
+| $a \equiv b(n) \Leftrightarrow b-a \in n\Z \\ \Leftrightarrow n|b-a$
+---
+
+Conséqance: tout entier a est congrue à son reste modulo n
+
+En enffet, la division euclidienne de a par n s'écrit
+
+$a = nq+r$  $0 \leq r < n$
+$a-r = nq$
+
+donc $n | a-r \Leftrightarrow a \equiv r(n)$
+
+### 2) Propriétés
+
+| Si $a \in \Z, a \equiv a(n)$ (la relation est réflexive)
+---
+
+$a - a = 0 = 0 \times n$
+
+donc $n|a-a \Rightarrow a \equiv a(n)$
+
+a et b étant 2 entiers, 
+| si $a \equiv b(n)$ alors $b \equiv b \equiv a(n)$ (la relation est symétrique)
+---
+
+Preuve: $a \equiv b(n) \Rightarrow n | b-a$
+$\Rightarrow n | (b-a) \times (-1)$
+$\Rightarrow n | a-b$
+$\Rightarrow a \equiv a(n)$
+
+Si a, b et c, 3 entiers
+| si $a \equiv b(n)$ et $b \equiv c(n)$ alors $a \equiv c(n)$ (la relation est transitive)
+---
+
+Preuve: 
+$a \equiv b(n) \Rightarrow n | b-a$
+$b \equiv c(n) \Rightarrow n | c-b$
+
+Alors $n| (b-a) + (c-b)$
+$\Rightarrow n | (c-a)$
+$\Rightarrow n | a \equiv c(n)$
+
+**<u>Compatibilité avec l'addition</u>**
+
+Si a, b, a', b' sont 4 entiers
+
+$$a \equiv b(n) \Rightarrow \\
+a' \equiv b'(n) \Rightarrow \\
+\\
+a + a' \equiv b + b'(n)$$
+
+Preuve:
+
+$a \equiv b(n) \Rightarrow n | b-a\}$
+$a' \equiv b'(n) \Rightarrow n | b'-a'\}$
+
+$\Rightarrow n | (b-a)+(b'-a')$
+$\Rightarrow n | (b-b')-(a+a')$
+$\Rightarrow a+a' \equiv b + b'(n)$
+Alors $a + a' \equiv b + b'(n)$
+
+
+
+**<u>Compatibilité avec la multiplication</u>**
+
+Si a, b et c sont 3 entiers
+
+Si
+$$a \equiv b(n) \; alors \; ac \equiv bc(n)$$
+
+Preuve:
+
+$a \equiv b(n) \Rightarrow n | b-a$
+$\Rightarrow \exist k \in \Z, b-a = nk$
+$\Rightarrow c(b-a)=nkc$
+$\Rightarrow bc-ac = n \times (kc)$
+$\Rightarrow n|bc-ac$
+$\Rightarrow ac\equiv bc(n)$
+
+
+
+Par conséquent, a, b, a', b' etant 4 entiers
+| si $a \equiv b(n)$ et $a' \equiv b'(n) \;alors\; aa' \equiv bb'(n)$
+---
+
+Preuve:
+
+$a \equiv b(n) \Rightarrow aa' \equiv ba'(n)$
+$a' \equiv b'(n) \Rightarrow ba' \equiv bb'(n)$
+Donc par transitivité, $aa' \equiv bb'(n)$
+
+Conséquence: a et b étant 2 entiers et $p \in \N$
+
+| Si $a \equiv b(n) alors a^p \equiv b^p(n)$
+---
+
+Preuve par récurence
+
+$P(p); a^p \ equiv b^p(n)$
+
+Init: p = 0
+
+$a^0 = 1$, $b^0 =1$ donc 
+$1 \equiv 1(n) \; donc\; a^0 \equiv b^0(n)$
+
+P(0) est vrai
+
+Hérédité
+
+$P_n \Rightarrow a^p \equiv b^p(n)$
+or $a \equiv b(n)$, donc
+$a^p * a \equiv b^p * b(n)$
+Donc : $a^{p+1} \equiv b^{p+1}(n),$ donc $P_{p+1} vraie$
+
+Conclusion : $\forall p \in \N, a^p \equiv b^p(n)$
+
+Remarque:
+
+| $a \equiv 0(n) \Leftrightarrow n|a$
+---
