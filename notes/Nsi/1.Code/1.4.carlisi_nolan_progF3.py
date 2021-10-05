@@ -3,7 +3,7 @@
 #┎━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 #┃ Nom: Carlisi, Prenom: Nolan, Classe: TG 04 ┃
 #┃ Creation: 20/09/2021 16:08:20              ┃
-#┃ Mise a jour: 22/09/2021 09:05:21           ┃
+#┃ Mise a jour: 30/09/2021 15:05:15           ┃
 #┃ Fichier: 1.4.carlisi_nolan_progF3.py       ┃
 #┃ Exercice fiche 3 Exo 1 à 10                ┃
 #┖━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
@@ -23,7 +23,6 @@ def liste_alea(a, b, n):
 
 def Exo3(): # {{{1
     pass
-
 
 
 def exo3():

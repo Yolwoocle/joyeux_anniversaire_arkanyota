@@ -1,4 +1,5 @@
 ---
+vim: set ft=tex
 title: Dérivées
 created: '2021-09-21T06:56:41.054Z'
 modified: '2021-09-29T07:54:21.149Z'
@@ -7,6 +8,7 @@ modified: '2021-09-29T07:54:21.149Z'
 
 # Dérivées\_Connexité
 
+Propriete: 2droites ont parralleles lorque que leur coefficient directeur sont egaux(que elle ont la meme pente)
 
 ## I) Composé de 2 fonctions
 
@@ -351,3 +353,193 @@ Calculer $f''(x)$
 
 $x \in \R, f'(x) = 6x² -6x +5$
 $f''(x) = 12x-6$
+
+---
+
+Exemple: 
+
+> $f(x) = e^x -x -1$
+> 1) Calculer $f'(x)$ et $f''(x)$
+> 2) Etablir le sens de variation de f'(x) en indiquant f'(o)
+> 1) Pour x \in \R: f'(x) = e^x -1 , f''(x)= e^x
+
+
+$f(x) = e^x - x - 1; I = \R$
+
+2) etablir le tableau de varatuion de f', en indiquand f'(0)
+on sais que, $\forall x \in \R, 0 < e^x$
+
+```table
+x   | -oo 0 +oo
+----------------
+f''x| +   |  + |
+f'x | /   0  / |
+```
+
+$f'(x) = e^0 -1= 1-1 = 0$
+3a) déduire le signe de f'(x).
+D'apres le tableau des varations précedent:
+
+```
+f'(x) - 0 +
+```
+
+b) on peut donner le tableau de carations
+
+```
+f'(x) - 0 +
+---
+f(x)  \ 0 /
+```
+
+$f(0) = e^0 -0-1 = 1-1=0$
+
+Le minimum de f sur \R est f(0) = 0
+
+donc: pour $x \in \R$, $0 \leq f(x)$
+donc: pour $x \in \R$, $0 \leq e^x-x-1$
+donc: pour $x \in \R$, $x+1 \leq e^x$
+
+#### 2) Dérivées successives d'une fonction.
+
+##### a) définition:
+f est une fonction définie sur un intervalle $I$ et n $\in \N^*$
+
+Lorsque on peut dériver successivement n fois la fonction $f$, on obtient la fonction dérivé d'ordre n de $f$
+
+Elle se note $f^{(n)}$
+
+A noter que: $f^{(n+1)} = f^{(n)}$'
+
+##### b) exemples:
+
+N°1) $f = exp$
+on a pour $n \in \N^*, f^{(n)} = exp$
+
+N°2)
+$f(x) = 2x^3 - 7x^2 + 4x + 1$
+pour $x \in \R$
+$f'(x) = 6x^2 - 14x +4$
+$f''(x) = 12x -14$
+$f^{(3)}(x) = 13$
+$f^{(4)}(x) = 0$
+
+### III) Fonctions  convexes - Concaves
+
+#### 1) définitions:
+
+##### a) définitions 1:
+
+[... 2 Shema figures 1]
+
+On a $A(a; f(a))$ et $B(b; f(b))$
+Le point M a pour cordonnées. $M(x; f(x)) \in C$
+$N(x; Y_N) \in [A;B]$
+$Y_N = m(x-a) + f(a)$
+On donne une équation de la droite $(AB)$
+Le point N est au dessus du point M revient à dire que $Y_M \leq Y_N$
+
+(AB): y= mx+p
+
+avec $m = \frac{y_B-y_A}{x_B-x_A} = \frac{f(x)-f(a)}{b-a}$
+
+Cette droite passe par A(a; f(a))
+Donc $y_A = mx_a +p$
+Donc $f(a)= ma +p$
+
+| Donc $f(a) - ma = p$
+---
+ENFIN: (AB): y = mx+f(a)-ma
+(AB): y = m(x-a)+f(a)
+
+Le point N d'abscisse x, situé sur le segment [AB] a pour ordonée $y_N = m(x-a)+f(a)$
+
+Dire que le point N est au dessus que le point M, revient a dire que: $y_M \leq y_N$
+
+---
+
+
+Soit petit $f$, une fonction définie sur grand J et C la courbe represantaive de f sur I.
+On dit que est convexe sur l'intervalle I, lorsque pour tt point A et B de la cource C le segemenet $[AB]$, situeé au dessus de l'arc de courbe [AB ...]
+
+Commentaires:
+- D'apres l'étude précédante pou tout $x \in [a;b]$
+$f(x) \leq m(x-a) + f(x) avec m = \frac{f(b) - f(a)}{b-a}$
+Soit k le mileu du segment $[AB]$
+
+[... 3 Shema figure 2]
+
+les cordonées de k sont $k(\frac{a+b}{2}; \frac{f(a)+f(b)}{2})$
+
+Soit $L$ le point de C d'abscisse (a+b)/2 on a $Y_L = f(\frac{a+b}{2})$
+
+On a L est en dessous de K
+
+Donc $Y_L \leq Y_K$
+
+Donc: $f(\frac{a+b}{2}) \leq \frac{f(a)+f(b)}{2}$
+
+figure 2:
+[... 4 Shema figure 2]
+
+On dit que. la fonction est concave sur lintervale I, lorsque poiur tout point A et B de la Courbe C, le segment [AB]. est situé en sessous de l'arc de courve [AB...]
+$\overset{\frown}{AB}$
+
+AUTRE Définition: qui peut être considéré comme propriété
+<u>Définition 2</u>: f est une fonction définie et dérivable sur un intervalle I
+$C$ est la courbe represantative de f
+
+[figure 1...def2]
+
+f converse sur un intervalle I, lorsque pour tout pint A(a; f(a)) de C avec a \in I la tangente au point A à la courbe C est située en dessous de la courbe C, sur l'intervalle I
+
+Signification
+Soit a \in I et A(a; f(a)
+T(a): y=f'(a)(x-a)+f(a)
+T(a) est en dessous de C sur I signifie que pour tout x \in I, f'(a)(x-a)+f(a) \leq f(x)
+
+
+[figure 1...def2]
+f concave sur un intervalle I, lorsque pour tout pint A(a; f(a)) de C avec a \in I la tangente au point A à la courbe C est située en dessus de la courbe C, sur l'intervalle I
+
+Signification
+Soit a \in I et A(a; f(a)
+T(a): y=f'(a)(x-a)+f(a)
+T(a) est en dessous de C sur I signifie que pour tout x \in I, f'(a)(x-a)+f(a) \leq f(x)
+
+Définiton 3: point d'infléxion à une courbe représentative
+
+[figure3 ..def3]
+
+
+Le point A de cordonée A(a, f(a)) est un point d'inflexion à la courbe C, lorsque la courbe C traverse la tanganteau point A
+
+conséquances:
+En abscice a d'un point d'intersection passe de concave à convexe ou bien de convexe à concave
+
+2) exemple: cas de contion exp
+
+[shema cas exp]
+
+Soit a \in \R, A(a, e^a)
+équation de la tangente au point d'abcisse a
+T_A: y= e^a(x-a)+e^a
+T_A: y=e^ax-e^aa+e^a
+
+T_A represante la fonction affine de g
+
+g(x) = e^ax-e^aa+e^a
+exp est convexe sur \R
+
+on va étudier le signe de exp(x)-g(x)
+pour evaluer la position de C et T_A
+
+On pose: h(x) = e^x -g(x)
+
+Ainsi h(x) = e^x-(e^ax-e^aa+e^a)
+h(x) = e^x-e^ax+e^a-e^a
+
+on étudie le ense de varation de h sur R, pour pouvoir dpnner le signe de h(x) siur R
+
+pour $x \in R, h'(x) = e^x-e^a*1$
+
