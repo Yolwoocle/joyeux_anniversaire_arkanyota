@@ -1,5 +1,5 @@
 ---
-vim: set ft=tex
+vim: set ft=tex:
 title: Dérivées
 created: '2021-09-21T06:56:41.054Z'
 modified: '2021-09-29T07:54:21.149Z'
@@ -521,25 +521,103 @@ En abscice a d'un point d'intersection passe de concave à convexe ou bien de co
 
 [shema cas exp]
 
-Soit a \in \R, A(a, e^a)
+Soit $a \in \R, A(a, e^a)$
 équation de la tangente au point d'abcisse a
-T_A: y= e^a(x-a)+e^a
-T_A: y=e^ax-e^aa+e^a
+$T_A: y= e^a(x-a)+e^a$
+$T_A: y=e^ax-e^aa+e^a$
 
-T_A represante la fonction affine de g
+$T_A$ represante la fonction affine de g
 
-g(x) = e^ax-e^aa+e^a
+$g(x) = e^ax-e^aa+e^a$
 exp est convexe sur \R
 
 on va étudier le signe de exp(x)-g(x)
-pour evaluer la position de C et T_A
+pour evaluer la position de C et $T_A$
 
-On pose: h(x) = e^x -g(x)
+On pose: $h(x) = e^x -g(x)$
 
-Ainsi h(x) = e^x-(e^ax-e^aa+e^a)
-h(x) = e^x-e^ax+e^a-e^a
+Ainsi $h(x) = e^x-(e^ax-e^aa+e^a)$
+$h(x) = e^x-e^ax+e^a-e^a$
 
 on étudie le ense de varation de h sur R, pour pouvoir dpnner le signe de h(x) siur R
 
 pour $x \in R, h'(x) = e^x-e^a*1$
 
+4) Application
+
+N°1: $f(x)=xe^x$; $I= \R$
+C est la courbe representative de f
+1) Donner letableau des vartiaion de f sur \R
+a) Pour $x \in \R, f'(x) = e^x + xe^x = e^x(x+1)$
+b) signe de f'(x)(
+
+$\forall x \in \R, 0 < e^x$  donc pour tout $x \in \R$, $f'(x)$ a le même signe que celui de x+1
+
+```md
+|x    | -oo      -1        +oo
++-----+-----------------------
+|x+1  |       -   0     +
+|f'(x)|       -   0     +     
+|f(x) |       \   |     /
+```
+
+$f(-1) = -1e^{-1} = \frac{-1}{e}$
+
+2) Etudier la convexité de f sur \R
+a) calcule de $f''(x)$
+
+$f''(x) = e^x(x+2)$
+
+b) étude du signe de $f''(x)$
+Pour tout x in R 0 < e^x donc
+ pour tout x in R, f''(x) a le meme signe que celui de x +2
+
+
+```md
+|x     | -oo      -2        +oo
++------+-----------------------
+|x+2   |       -   0     +
+|f''(x)|       -   0     +     
+```
+c) Les conclusuion
+1) Sur ]-oo; -2], f''x <=0
+Par propriété f est donc concave sur ]-oo; -2]
+2) Sur ]-2; +oo], 0<= f''x
+Par propriété f est donc convexe sur [-2; +oo[
+3) f''(-2) = 0 et f'' change de signe en -2
+
+Par propriété: le point d'abscisse a = -2 est un point d'inflexion à la courbe C
+Les points de ce point K(-2; -2e^{-2}) soit K(-2; \frac{-2}{e^2})
+
+A noter qu'en ce point K la courbe representative de f, C, traverse la tengente:
+
+T(-2): y=f'(-2)(x+2) + f(-2)
+
+On a  f(-2) = \frac{-2}{e^2} et f'(-2) = e^{-2}(-1) = \frac{-1}{e^2}
+
+Enfin y = \frac{-1(x+2)-2}{e^2}
+
+y = \frac{-1x-4}{e^2}
+
+[N=2]
+
+On suppose que c est la representation graphique d'une fonction dérivable sur [-3; 4] Donner en justifiant le signe de f'(x)
+
+D'apres la courbe
+
+```md
+x    | -3   -2          1           4
+-----+-------+----------+-------------
+f(x) |     / |  \       |      /       
+f'(x)|    +  0    -     0      +
+f'(x)|    /  |    \     |      /
+ccl  |a conv    conc       conv
+```
+
+Deuxieme partie:
+
+f est une fonction dérviable sur [-3; 4], C est la courbe représentative Donner en focntion l'étude de la convecité de f
+C es tla courbe representative de f'
+
+
+Pour les pnt d'inflexion -2, 1
