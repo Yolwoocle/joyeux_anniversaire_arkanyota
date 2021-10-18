@@ -30,64 +30,76 @@
 	</script>
 </head>
 <body>
-<h1 id="exosdeuxsciecledenergie">ExosDeuxsciecledenergie</h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>'2.0.Nombres complexes, Aspect Algebriques'</title>
+	<meta name="created" content="'2021-10-13T12:43:14.057Z'"/>
+	<meta name="modified" content="'2021-10-13T13:08:56.496Z'"/>
+</head>
+<body>
 
-<h2 id="3comprendrelecoursp121">3 Comprendre le cours p121</h2>
+<h1 id="2.0.nombrescomplexesaspectalgebriques">2.0.Nombres complexes, Aspect Algebriques</h1>
 
-<p>1)a) C&#8217;est l&#8217;alternateur
-b)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<h2 id="ivocabulaire">I) Vocabulaire</h2>
 
-<p><span class="math">\(n = E_{elec}/E_{méca} = 1,3/1,4 = 13/14 = 0,93\)</span></p>
+<p>On sait qu&#8217;il n&#8217;exsiste pas de nombre réel vérifiant <span class="math">\(x^2=-1\)</span></p>
 
-<h2 id="abiciclettep123">A biciclette p123</h2>
+<p>L&#8217;ensemble des complexes est construit à partir d&#8217;un nombre, appelé <span class="math">\(i\)</span> , qui verifie <span class="math">\(i^2 = -1\)</span></p>
 
-<p>1a) 1=rotor
-2= stator
-2) rotor generge un chant magétique, et le stator le transfome en electicité
-3) Le rotot tourne et le stator est statique</p>
+<p>Cet ensemble est appelé <span class="math">\(\mathbb{C}\)</span> Les règles de calcul algébrique dans <span class="math">\(\mathbb{C}\)</span> sont identiques à celles de <span class="math">\(\R\)</span></p>
 
-<p>2a)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<p>Exemples:</p>
 
-<p>b) Que le gain est de 0,4 et donc la perte est de 60%
-c) faire bouger le rotor et verifier si il y&#8217;a de l&#8217;lectricité au bornes avec un led</p>
+<ul>
+<li><span class="math">\(i + i = 2i\)</span></li>
+<li><span class="math">\((5i)² = 25i² = 25*(-1) = -25\)</span></li>
+<li><span class="math">\((3+i)2i = 6i + 2i^2 = 6i-1*2 =-2+6i\)</span></li>
+<li><span class="math">\(\frac{1}{3+i} = ... = \frac{3}{10} - \frac{1}{10}i\)</span></li>
+</ul>
 
-<h2 id="activité4:">Activité 4:</h2>
+<p>Tout élément de <span class="math">\(\mathbb{C}\)</span> peut s&#8217;écrire de façon unique sous la forme</p>
 
-<p>Paragraphe argumentée:</p>
+<h2 id="aibainrbinr">| <span class="math">\(a+ib, a\in \R, b \in \R\)</span></h2>
 
-<p>On préfèrera choisir comme semi-conducteur le silicuim, car en premier
-il est beaucoup présant da la nature à l&#8217;état naturel et en
-deuxieme il à un fort rendement maximal de conversion</p>
+<p>appelé la <u>forme algébrique</u> de ce nombre</p>
 
-<p>En première partie sa forte abondance dans les éléments chimique
-dans la croûte terrestre, presque 30% d&#8217;abondance par rapport
-au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%</p>
+<p>Si <span class="math">\(z = a+ib\)</span>, avec <span class="math">\(a \in \R\)</span> et <span class="math">\(b \in \R\)</span>, a s&#8217;appelle, <u>partie réelle</u> de <span class="math">\(z\)</span>, notée <span class="math">\(\Re(z)\)</span></p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui
-est de 30% presque à égalité à l&#8217;Arsénuire de gallium,
-et 2x plus que le Germanuim à 15%, mais aussi son absorbsion
-relativement proche de spectre solaire(spectre visible),</p>
+<p><span class="math">\(b\)</span> s&#8217;appelle la <u>partie imaginaire</u> de <span class="math">\(z\)</span>, notée <span class="math">\(\Im(z)\)</span></p>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur
-CARLISI Nolan TG04</p>
+<h2 id="zzleftrightarrowrezrezetimzimz">| <span class="math">\(z = z' \Leftrightarrow \Re(z) = \Re(z')\)</span> et <span class="math">\(\Im(z) = \Im(z')\)</span></h2>
 
-<p>Paragraphe argumenté Activité 4 :</p>
+<p>Si <span class="math">\(\Re(z) = 0\)</span>, alors <span class="math">\(z\)</span> est un <u>imaginaire pur</u></p>
 
-<p>On regardera en premier, l’abondance du silicuim à l’état naturel puis en seconde partie son randement maximal de conversion.</p>
+<p>Tout réel <span class="math">\(x\)</span> peux s&#8217;écrire <span class="math">\(x=x+0i\)</span>, donc <span class="math">\(x \in \mathbb{C}\)</span>, donc <span class="math">\(\R \subset \mathbb{C}\)</span></p>
 
-<p>En première partie sa forte abondance dans les éléments chimique dans la croûte terrestre, presque 30% d&#8217;abondance par rapport au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%.</p>
+<p><u>Remarque:</u> il n&#8217;y a pas de relation d&#8217;ordre <span class="math">\(\mathbb{C}\)</span></p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui est de 30% presque à égalité à l&#8217;Arsénuire de gallium, et 2x plus que le Germanuim à 15%, mais aussi son absorption relativement proche de spectre solaire(spectre visible) entre 400 et 1000nm.</p>
+<p>Ecrire <span class="math">\(3 - 2i \geq 5\)</span> n&#8217;a pas de sens</p>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur grace à sa forte abondance dans la croute terrestre, et son haut randement maximal de conversion.</p>
+<h2 id="iiconjugé">II) Conjugé</h2>
+
+<h3 id="1définition">1) Définition</h3>
+
+<h2 id="soitzinmathbbcaveczaibainrbinrleconjuguédeznotéoverlinezestdéfiniparoverlineza-ib">Soit <span class="math">\(z \in \mathbb C,\)</span> avec <span class="math">\(z = a+ib\)</span>, <span class="math">\(a \in \R, b \in \R\)</span>
+Le conjugué de <span class="math">\(z\)</span>, noté <span class="math">\(\overline{z}\)</span> est défini par
+| <span class="math">\(\overline{z} = a-ib\)</span></h2>
+
+<p>On a <span class="math">\(\overline{\overline{z}} = z\)</span>, donc on n&#8217;utilise pas cette notation</p>
+
+<h3 id="2propriété">2) Propriété</h3>
+
+<h2 id="reoverlinezrezetimoverlinez-imz">| <span class="math">\(\Re(\overline z) = \Re(z)\)</span> et <span class="math">\(\Im(\overline z) = -\Im(z)\)</span></h2>
+
+<h2 id="zoverlinezleftrightarrowzinr">| <span class="math">\(z = \overline z \Leftrightarrow z\in \R\)</span></h2>
+
+<p><u>Preuve:</u></p>
+
+</body>
+</html>
+
 
 </body>
 </html>

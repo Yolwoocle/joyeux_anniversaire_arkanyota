@@ -30,64 +30,324 @@
 	</script>
 </head>
 <body>
-<h1 id="exosdeuxsciecledenergie">ExosDeuxsciecledenergie</h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Raisinoment par récurence</title>
+	<meta name="created" content="'2021-09-07T06:19:20.025Z'"/>
+	<meta name="modified" content="'2021-09-14T07:07:07.004Z'"/>
+</head>
+<body>
 
-<h2 id="3comprendrelecoursp121">3 Comprendre le cours p121</h2>
+<h1 id="raisinomentparrécurence">Raisinoment par récurence</h1>
 
-<p>1)a) C&#8217;est l&#8217;alternateur
-b)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<h2 id="texhelp">Tex Help</h2>
 
-<p><span class="math">\(n = E_{elec}/E_{méca} = 1,3/1,4 = 13/14 = 0,93\)</span></p>
+<p>$$
+\left
+{
+\begin{array}
+{rcr}x+2y &amp; = &amp; -1 \
+-x+4y &amp; = &amp; 0 \
+-x+4y &amp; = &amp; 0 \
+\end{array}
+\right.$$</p>
 
-<h2 id="abiciclettep123">A biciclette p123</h2>
+<p>Hello <span class="math">\(\left\{\begin{array}{rcr}x+2y &amp; = &amp; -1 \\-x+4y &amp; = &amp; 0 \\-x+4y &amp; = &amp; 0 \\\end{array}\right.\)</span></p>
 
-<p>1a) 1=rotor
-2= stator
-2) rotor generge un chant magétique, et le stator le transfome en electicité
-3) Le rotot tourne et le stator est statique</p>
+<h2 id="1principe">1) Principe</h2>
 
-<p>2a)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<p>On donne une propriété qui depends d&#8217;un entier naturel n notée P(n)
+On veut montrer que cette propriété est vraie pour tout entier naturel n
+On pourra le démontrer de la façon suivante
+INITIALATION: on montre que la propriété est VRAIE pour n = 0
+Et
+HéréDITé: On montre que poun tout entier naturel n;</p>
 
-<p>b) Que le gain est de 0,4 et donc la perte est de 60%
-c) faire bouger le rotor et verifier si il y&#8217;a de l&#8217;lectricité au bornes avec un led</p>
+<ul>
+<li> Si <span class="math">\(P(n)\)</span> est VRAIE</li>
+<li> Alors <span class="math">\(P(n+1)\)</span> est VRAIE</li>
+</ul>
 
-<h2 id="activité4:">Activité 4:</h2>
+<p>On poura affirmer selon le principe de raisonnement par récurrance, pour tout entier naturel naturel n, P(n) est VRAI</p>
 
-<p>Paragraphe argumentée:</p>
+<h2 id="2exemple">2) Exemple</h2>
 
-<p>On préfèrera choisir comme semi-conducteur le silicuim, car en premier
-il est beaucoup présant da la nature à l&#8217;état naturel et en
-deuxieme il à un fort rendement maximal de conversion</p>
+<p>Exemple N°1:</p>
 
-<p>En première partie sa forte abondance dans les éléments chimique
-dans la croûte terrestre, presque 30% d&#8217;abondance par rapport
-au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%</p>
+<p><span class="math">\((u_n) = \{ u_0=600, pour \;u_n+1 = 0,85u_n + 300\)</span></p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui
-est de 30% presque à égalité à l&#8217;Arsénuire de gallium,
-et 2x plus que le Germanuim à 15%, mais aussi son absorbsion
-relativement proche de spectre solaire(spectre visible),</p>
+<p>Démonterer en utilisant le raisonement par récurence pour tout n <span class="math">\(\in \N\)</span>, <span class="math">\(u_n=-1400*0,85^n+2000\)</span></p>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur
-CARLISI Nolan TG04</p>
+<p><u>Notation</u> : Soit n <span class="math">\(\in \N\)</span>, on note P(n) : <strong><span class="math">\(&quot;u_n=-1400*0,85^n+2000&quot;\)</span></strong></p>
 
-<p>Paragraphe argumenté Activité 4 :</p>
+<p><u> INITIALISATION: </u> on montre que P(o) est <em>VRAIE</em>
+On sait que <span class="math">\(u_n = 600\)</span></p>
 
-<p>On regardera en premier, l’abondance du silicuim à l’état naturel puis en seconde partie son randement maximal de conversion.</p>
+<p>on calcule: <span class="math">\(u_0=-1400*0,85^0+2000 =-1400*1+2000 = 600\)</span>
+On a prouvé que <span class="math">\(u_0 = -1400*0,85⁰+2000\)</span></p>
 
-<p>En première partie sa forte abondance dans les éléments chimique dans la croûte terrestre, presque 30% d&#8217;abondance par rapport au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%.</p>
+<p><u>BILAN</u>: P(0) est <em>VRAIE</em></p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui est de 30% presque à égalité à l&#8217;Arsénuire de gallium, et 2x plus que le Germanuim à 15%, mais aussi son absorption relativement proche de spectre solaire(spectre visible) entre 400 et 1000nm.</p>
+<p><u>HéRéDITé</u>: Soit <span class="math">\(n \in \N\)</span></p>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur grace à sa forte abondance dans la croute terrestre, et son haut randement maximal de conversion.</p>
+<p>Hypothèse de récurence: <span class="math">\(u_n=-1400*0,85^n+2000\)</span>
+Conclustion$_\text{ce que on doit démonter}$: <span class="math">\(u_{n+1} = -1400*0,85^{n+1}+2000\)</span></p>
+
+<p><u>PREUVE</u>: D&#8217;apres la relation de récurence <span class="math">\(u_{n+1} = 0,85^{u_n} + 300\)</span></p>
+
+<p>D&#8217;apres l&#8217;hypothese de récurence
+<span class="math">\(u_n =  -1400*0,85^{n}+2000\)</span></p>
+
+<blockquote>
+<p>Donc: <span class="math">\(u_{n+1} = 0,85*(-1400*0,85^{n}+2000) + 300\)</span>
+Soit: <span class="math">\(u_{n+1} = 0,85*(-1400*0,85^{n})+0,85*2000 + 300\)</span>
+Soit: <span class="math">\(u_{n+1} = -1400*0,85^{1}0,85^n + 1700 +300\)</span>
+Soit: <span class="math">\(u_{n+1} = -1400*0,85^{n+1} + 2000\)</span>
+<strong>C&#8217;est ce que l&#8217;on devait démonterer</strong></p>
+</blockquote>
+
+<p>Donc: <span class="math">\(u_{n+1} = 0,85*(-1400*0,85^{n}+2000) + 300\)</span>
+Donc: <span class="math">\(u_{n+1} = 0,85*-1400*0,85^{n}+0,85 * 2000 + 300\)</span>
+Soit: <span class="math">\(u_{n+1} = 0,85^{n+1} *- 1400 + 0,85*2000 + 300\)</span>
+Soit: <span class="math">\(u_{n+1} = 0,85^{n+1} *- 1400 + 1700 + 300\)</span>
+Soit: <span class="math">\(u_{n+1} = -1400*0,85^{n+1} + 2000\)</span></p>
+
+<p><u>BILAN</u>: D&#8217;apres le princepe de raisement par récurrence pour tout <span class="math">\(n \in \N\)</span>, P(n) est <em>VRAIE</em></p>
+
+<p>Exemple N°2: Inégalité de BERNOULLI</p>
+
+<p><span class="math">\(Soit\;a \in ]0; + \infin[\)</span>
+On a pour tout <span class="math">\(n \in \N: (1+a)^n \ge 1+na\)</span>
+On pose pour <span class="math">\(n \in \N P(n): &quot;(1+a)^n \ge 1+na&quot;\)</span></p>
+
+<p>On doit donc montrer que <span class="math">\((1+a)⁰ \ge 1+0*a\)</span>
+Or <span class="math">\((1+a)⁰ = 1\; et \;1+0*a = 1 \;et \;1&gt;1 \;on\; a: (1+a)⁰ 1+0*a\)</span></p>
+
+<p>Hérédité: Soit <span class="math">\(n \in \N\)</span></p>
+
+<p>Hypothèse de récurence <strong>HR</strong> : <span class="math">\((1+a)^n \ge 1+na\)</span>
+Conclustion   <strong>CCL</strong> : <span class="math">\((1+a)^{n+1} \ge 1+(n+1)a\)</span></p>
+
+<p>Preuve:
+On rappelle que <span class="math">\(X^{n+1} = X*X^n\)</span></p>
+
+<p>On a : <span class="math">\((1+a)^{n+1} = (1+a)*(1*a)^n\)</span></p>
+
+<p>Sachant que a <span class="math">\(\in ]0; +inf[\;;0&lt;1+a\)</span>
+D&#8217;apres l&#8217;hypothèse de récurence:
+<span class="math">\((1+a)^n \ge 1+na\)</span>
+Comme 1+a est positif on garde le sens de l&#8217;inégalité</p>
+
+<p>Donc : <span class="math">\((1+a)*(1+a)^n \ge 1+na*(1+a)\)</span>  <em>(1)</em>
+CAR <span class="math">\((1+a) \ge 0\)</span></p>
+
+<p>Or: <span class="math">\((1+a)*(1+a)^n = (1+a)^{n+1}\)</span>
+ET <span class="math">\(1+na*(1+a) = 1+na+a+na²\)</span></p>
+
+<p>Soit <span class="math">\((1+a)(1+na) = 1+(n+1)a+na²\)</span>
+or <span class="math">\(na² \ge 0\)</span> donc <span class="math">\((1+a)(1+na)\ge 1+(n+1)a\)</span> <em>(2)</em></p>
+
+<p>En utilisant: (1) et (2)</p>
+
+<p><span class="math">\((1+a)^{n+1} \ge (1+a)(1+na)\)</span>
+et: <span class="math">\((1+a)(1+na) \ge 1+(n+1)a\)</span></p>
+
+<p>Donc: <span class="math">\((1+a)^{n+1} \ge 1+(n+1)a\)</span> <em>CQFD</em></p>
+
+<p><strong>Bilan: pour tout n \in \N, P(n) est <em>VRAIE</em> d&#8217;apres le principe de raisonement par récurrence</strong></p>
+
+<hr />
+
+<h3 id="3autrecaspratique">3) Autre cas pratique</h3>
+
+<p>Dans certains cas, on doit démonterer que la propriété est VRAI a partir d&#8217;un certain rang: c&#8217;est à dire un entier naturel <span class="math">\(n_0\)</span> tel que pour tout n <span class="math">\(\ge n_0\)</span>, P(n) est VRAIE</p>
+
+<p>Dans ce cas l&#8217;initalisation consiste à verifier que <span class="math">\(P(n_0)\)</span> est <em>VRAIE</em> et que l&#8217;hérédité en indiquant cepandant: pour <span class="math">\(n \in \N\)</span>, tel que <span class="math">\(n \ge n_0\)</span></p>
+
+<p><span class="math">\(n_0\)</span> est un entier naturel</p>
+
+<hr />
+
+<h3 id="4principederécurrencedouble">4) Principe de récurrence double</h3>
+
+<p>a) exemple: <span class="math">\((u_n): \{ u_0=1; u_1 =2, \text{pour tout} n \in \N, u_{n+2} = u_{n+1} + 2u_n\)</span></p>
+
+<p>1) Calculer <span class="math">\(u_2\)</span></p>
+
+<p><span color="green">Dans la relation de récurrence on remplace n=0</span>, <span class="math">\(u_2 = u_n+2u_0 = 2+2*1 = 4\)</span></p>
+
+<p><u><span class="math">\(u_2 = 4\)</span></u></p>
+
+<p>2) Démontrer que: pour tout <span class="math">\(n \in \N, u_n = 2^n\)</span></p>
+
+<p>On pose pour <span class="math">\(n \in \N, P(N) : &quot;u_n = 2^n&quot;\)</span></p>
+
+<p>INITIALISATION: on montre que P(0) ET P(1) sont VRAIES</p>
+
+<p>EN effet: <span class="math">\(P(0) = 2⁰ = 1\ = u_0; et\; P(1) = 2 = 2¹ = u_1\)</span></p>
+
+<p>HéRéDITé : Soit <span class="math">\(n \in \N\)</span></p>
+
+<p>HR: <span class="math">\(P(n) et P(n+1)\)</span> sont VRAIE
+CCL: P(n+2) est VRAIE</p>
+
+<p>Preuve:
+On a <span class="math">\(u_n = 2^n\)</span>; <span class="math">\(u_{n+1} = 2^{n+1}\)</span> par hypothèse de récurrence. En utilisant la relation de récurrence:</p>
+
+<p><span class="math">\(u_{n+2} = u_{n+1} + 2u_n = 2^{n+1} + 2*2^n = 2^{n+1} +2^{n+1}\)</span>
+donc <span class="math">\(u_{n+2} = 2¹ * 2^{n+1} = 2^{n+2}\)</span>
+Ainsi <span class="math">\(P(n+2)\)</span> est VRAIE</p>
+
+<hr />
+
+<p>INITIALISATION: on montre que <span class="math">\(P(n_0)\)</span> ET <span class="math">\(P(n_0+1)\)</span> sont VRAIES</p>
+
+<p>HéRéDITé : Soit <span class="math">\(n \in \N\)</span>
+Si: <span class="math">\(P(n) et P(n+1)\)</span>
+Alors: P(n+2) est VRAIE</p>
+
+<h2 id="iisuitesmajorées-minorées-borenées.">II) SUITES MAJORéES - MINORéES - BORENéES.</h2>
+
+<h3 id="1definitiions">1) Definitiions</h3>
+
+<p>Soit <span class="math">\(u_n\)</span> une suite</p>
+
+<h4 id="suitemajorée">Suite Majorée</h4>
+
+<p>On dit que la suite <span class="math">\(u_n\)</span> est majorées
+s&#8217;il existe un nombre réel <span class="math">\(M\)</span>, tel que: pout tout <span class="math">\(n \in \N\)</span>, <span class="math">\(u_n \leq M\)</span>
+Le nombre <span class="math">\(M\)</span>, ne doit pas dépendre de <span class="math">\(n\)</span>
+Ce nombre <strong><span class="math">\(M\)</span> est un majorant</strong> de cette suite</p>
+
+<h4 id="suiteminorée">Suite Minorée</h4>
+
+<p>On dit que la suite <span class="math">\(u_n\)</span> est minorée
+s&#8217;il existe un nombre réel <span class="math">\(m\)</span>, tel que: pout tout <span class="math">\(n \in \N\)</span>, <span class="math">\(m \leq u_n\)</span>
+Le nombre <span class="math">\(m\)</span>, ne doit pas dépendre de <span class="math">\(n\)</span>
+Ce nombre <strong><span class="math">\(m\)</span> est un minorant</strong> de cette suite</p>
+
+<h4 id="suitesbornée">Suites bornée</h4>
+
+<p>Une suite est bornée.
+lorsque&#8217;elle est majorée et minotée</p>
+
+<p>Autremement dit:
+Si il exsite <span class="math">\(m \in \R\)</span> et <span class="math">\(M \in \R\)</span> tels que
+<span class="math">\(\forall \in \N\)</span>, <span class="math">\(m \leq u_n \leq M\)</span></p>
+
+<h3 id="2propriétés:">2) Propriétés:</h3>
+
+<p>étude sur une suite <span class="math">\(u_n\)</span> monotone
+On rappele que une suite monotone est une suite croissante ou bien décroissante,
+Cas d&#8217;une suite croissante
+<span class="math">\(u_0\)</span> <span class="math">\(\leq\)</span> <span class="math">\(u_1\)</span> <span class="math">\(\leq\)</span> <span class="math">\(u_2\)</span> <span class="math">\(\leq\)</span> &#8230;&#8230; <span class="math">\(\leq\)</span> <span class="math">\(u_n\)</span> <span class="math">\(\leq\)</span> <span class="math">\(u_{n+1}\)</span> <span class="math">\(\leq\)</span> &#8230;.
+On observe que <span class="math">\(\forall n \in \N, u_0 \leq u_n\)</span>
+Soit <span class="math">\(u_n\)</span> est minorée par <span class="math">\(u_0\)</span></p>
+
+<p>Preuve: prouver l&#8217;observation en utilisonant le résonement par réccurrence
+Soit <span class="math">\(n \in \N, P(n): &quot;u_0 \leq u_n&quot;\)</span></p>
+
+<p>INITIALISRATION: on a <span class="math">\(u_0 \leq u_0\)</span> donc P(0) est VRAIE:
+HéRédité: SOit <span class="math">\(n \in \N\)</span>
+<span class="math">\(u_0 \leq u_n \Rightarrow u_0 \leq u_{n+1}\)</span></p>
+
+<p>Preuve:
+on a par HR: <span class="math">\(u_0 \leq u_n\)</span>
+Sachant que u_n est croissante: <span class="math">\(u_n \leq u_{n+1}\)</span> on déduit que <span class="math">\(u_0 \leq u_{n+1}\)</span></p>
+
+<p><u>PROPRI2T2</u>
+Une suite <strong>croissante</strong> est <u>minoré</u> par son 1er terme
+Une suite <strong>décroisant</strong> est <u>majoré</u> par son 1er terme</p>
+
+<p><span class="math">\(\left\{\begin{array}{rcr}u_0 = 6 \\\forall n \in \N, u_{n+1} = 0,2*u_n-3\\\end{array}\right.\)</span></p>
+
+<p>1) En utilisant le raisonement par récurrence, démontrez que:
+<span class="math">\(u_n\)</span> est minorée par -3,75</p>
+
+<p>2) a) étudier le sens de varations de <span class="math">\(u_n\)</span>. en utilisant le raisonement par récueence
+b) Cette suite est elle bornées</p>
+
+<p><span class="math">\[(u_n) = \{ u_0, \forall n \in \N, u_{n+1} = 0,2u_n -3\]</span></p>
+
+<p>En utilisant le raisonnement par récurrence, étudier le sens de varation de <span class="math">\(u_n\)</span></p>
+
+<ul>
+<li><span class="math">\(u_1 - u_0 : u_1 = 0,2 *6 -3 = 1,2 -3 = 1,8\)</span></li>
+</ul>
+
+<p>puis <span class="math">\(u_1-u_0 = -1,8-6 = -7,8\)</span></p>
+
+<p>soit <span class="math">\(n \in \N\)</span> <span class="math">\(P(n): &quot;u_{n+1} - u{n} &lt; 0&quot;\)</span></p>
+
+<p>INIT: <span class="math">\(u_1 - u_0 &lt; 0\)</span> donc P(0) est VRAIE</p>
+
+<p>H2E2DIT2: soit <span class="math">\(n \in \N\)</span></p>
+
+<p>HR : <span class="math">\(u_{n+1}-u_{n} &lt; 0\)</span>
+CCL: <span class="math">\(u_{n+2}-u_{n+1} &lt; 0\)</span></p>
+
+<p>Preuve:</p>
+
+<p>D&#8217;apres la relation de récurrence:
+<span class="math">\(u_{n+2} = 0.2u_{n+1} -3\)</span>
+et <span class="math">\(u_{n+1} = 0.2u_{1} -3\)</span></p>
+
+<p>Puis: <span class="math">\(u_{n+2} - u{n+1} = 0,2u_{n+1} - 3 - (0,2u_n-3)\)</span>
+<span class="math">\(\Leftrightarrow u_{n+2} - u{n+1} = 0,2u_{n+1} - 3 -0,2u_n +3\)</span>
+<span class="math">\(\Leftrightarrow u_{n+2} - u{n+1} = 0,2(u_{n+1} -u_n)\)</span></p>
+
+<p>D&#8217;apres HR <span class="math">\(u{_n+1} - u_n &lt; 0\)</span>
+donc <span class="math">\(0,2(u{_n+1} - u_n) &lt; 0\)</span>
+donc <span class="math">\(u{_n+1} - u_n &lt; 0\)</span></p>
+
+<p>Bilan: selon le principe de raisonnement par récurrence</p>
+
+<p><span class="math">\(\forall n \in \N, u_{n+1} - u_n &lt; 0\)</span></p>
+
+<p>Donc <span class="math">\(u_n\)</span> est stricement décroissancte
+Montrere que <span class="math">\(u_n\)</span> est bornée</p>
+
+<p><span class="math">\(u_n\)</span> est strictement décroissante
+donc <span class="math">\(\forall n \in \N\)</span>, <span class="math">\(u_n \leq u_0 = 6\)</span></p>
+
+<p><span class="math">\(u_n\)</span> est minoée par -3.75</p>
+
+<p>donc <span class="math">\(\forall n \in \N\)</span> <span class="math">\(-3,75 \leq u_n \leq 6\)</span></p>
+
+<h3 id="4suitenonmajoréesuitenonminorée">4) Suite non majorée; suite non minorée</h3>
+
+<h4 id="adéfinitiondunesuitenonmajorée">a) Définition d&#8217;une suite non majorée</h4>
+
+<p><span class="math">\(u_n\)</span> est majorée, s&#8217;il existe M, pour tout <span class="math">\(n \in \N\)</span>: <span class="math">\(u_n &lt;= M\)</span></p>
+
+<p>&#8212;-u0&#8212;&#8211;u2&#8212;&#8211;0&#8212;1&#8212;&#8211;u1&#8212;-un&#8212;&#8212;M&#8212;&#8212;&#8212;&#8212;&#8211;&gt;</p>
+
+<p><span class="math">\(u_n\)</span> n&#8217;est pas majorée, s&#8217;il n&#8217;exsiste pas de nb <span class="math">\(M \in \R, \forall n \in \N, u_n \leq M\)</span></p>
+
+<p>&#8212;-M&#8212;&#8212;&#8212;-0&#8212;1&#8212;&#8212;&#8212;un0&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;&gt;</p>
+
+<p>si pour tout nombre <span class="math">\(M \in \R\)</span>, il existe <span class="math">\(n_0 \in \N, u_{n_0}&gt;M\)</span></p>
+
+<p>Définiton d&#8217;une suite non minorée,</p>
+
+<h4 id="bdéfinitiondunesuitenonminorée:">b) Définition d&#8217;une suite non minorée:</h4>
+
+<p><span class="math">\(u_n\)</span> est minorée s&#8217;il existe <span class="math">\(m\)</span>, s&#8217;il existe <span class="math">\(m \in \R\)</span> , <span class="math">\(\forall n \in \N, m \leq u_n\)</span></p>
+
+<p>&#8212;-m&#8212;&#8212;&#8212;-0&#8212;1&#8212;&#8212;&#8212;u1&#8211;u2&#8212;-u0&#8212;-un&#8212;-&gt;
+<span class="math">\(u_n\)</span> n&#8217;est pas majorée, s&#8217;il n&#8217;exsiste pas de nb <span class="math">\(m \in \R, \forall n \in \N, u_m \leq u_n\)</span></p>
+
+<p>&#8212;&#8212;&#8212;&#8212;&#8211;0&#8212;1&#8212;&#8212;&#8212;un0&#8212;&#8211;m&#8212;&#8212;&#8212;&#8212;&#8211;&gt;</p>
+
+<p>si pour tout nombre <span class="math">\(m \in \R\)</span>, il existe <span class="math">\(n_0 \in \N, u_{n_0}&lt;m\)</span></p>
+
+<h4 id="cunesuitenestpasbornéelorquennestpasmajoréoubienlorsquelleestpasminoré.">c) une suite n&#8217;est pas bornée, lorque n n&#8217;est pas majoré ou bien lorsqu&#8217;elle est pas minoré.</h4>
+
+</body>
+</html>
+
 
 </body>
 </html>

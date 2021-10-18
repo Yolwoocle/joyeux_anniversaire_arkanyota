@@ -30,64 +30,386 @@
 	</script>
 </head>
 <body>
-<h1 id="exosdeuxsciecledenergie">ExosDeuxsciecledenergie</h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>1.0.DivisibilieCongruence</title>
+	<meta name="created" content="'2021-10-14T11:47:43.530Z'"/>
+	<meta name="modified" content="'2021-10-14T11:51:55.608Z'"/>
+</head>
+<body>
 
-<h2 id="3comprendrelecoursp121">3 Comprendre le cours p121</h2>
+<h1 id="divisibiliecongruence">DivisibilieCongruence</h1>
 
-<p>1)a) C&#8217;est l&#8217;alternateur
-b)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<hr />
 
-<p><span class="math">\(n = E_{elec}/E_{méca} = 1,3/1,4 = 13/14 = 0,93\)</span></p>
+<h2 id="title:divisibilitécongruencecreated:2021-09-08t12:26:49.531zmodified:2021-09-15t13:01:42.502z">title: &#8216;Divisibilité, congruence&#8217;
+created: &#8216;2021&#8211;09&#8211;08T12:26:49.531Z&#8217;
+modified: &#8216;2021&#8211;09&#8211;15T13:01:42.502Z&#8217;</h2>
 
-<h2 id="abiciclettep123">A biciclette p123</h2>
+<h1 id="divisibilitécongruence">Divisibilité, congruence</h1>
 
-<p>1a) 1=rotor
-2= stator
-2) rotor generge un chant magétique, et le stator le transfome en electicité
-3) Le rotot tourne et le stator est statique</p>
+<h2 id="tex">Tex</h2>
 
-<p>2a)
-&#8212;&#8212;&#8212;&#8212;&#8211; /&#8212;&#8212;&gt; Energie électrique
-Energie &#8211;&gt; | Alternateur | /
-mécanique &#8212;&#8212;&#8212;&#8212;&#8211; <br />
- - - - &gt; Energie thermique</p>
+<p><span class="math">\(\exist\)</span> = exist (exsiste)
+<span class="math">\(\forall\)</span> = forall (pour tout)</p>
 
-<p>b) Que le gain est de 0,4 et donc la perte est de 60%
-c) faire bouger le rotor et verifier si il y&#8217;a de l&#8217;lectricité au bornes avec un led</p>
+<h2 id="iarithmétiquerèglesdujeu">I) Arithmétique, règles du jeu</h2>
 
-<h2 id="activité4:">Activité 4:</h2>
+<p>L&#8217;arithmetique est l&#8217;étude des nombres entiers</p>
 
-<p>Paragraphe argumentée:</p>
+<p>L&#8217;ensembles des entiers est noté <span class="math">\(\Z\)</span></p>
 
-<p>On préfèrera choisir comme semi-conducteur le silicuim, car en premier
-il est beaucoup présant da la nature à l&#8217;état naturel et en
-deuxieme il à un fort rendement maximal de conversion</p>
+<p>Les entiers positifs sont appeléss des entiers naturels.
+L&#8217;ensembles des entiers naturels est noté <span class="math">\(\N\)</span></p>
 
-<p>En première partie sa forte abondance dans les éléments chimique
-dans la croûte terrestre, presque 30% d&#8217;abondance par rapport
-au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%</p>
+<p>On admet les règles suivantes</p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui
-est de 30% presque à égalité à l&#8217;Arsénuire de gallium,
-et 2x plus que le Germanuim à 15%, mais aussi son absorbsion
-relativement proche de spectre solaire(spectre visible),</p>
+<ul>
+<li> La somme, la différence, le produits de deux entiers est un entier</li>
+<li> Si <span class="math">\(a \in \Z\)</span> et <span class="math">\(n \in \N\)</span>, alors <span class="math">\(a^n \in \Z\)</span></li>
+<li> Toute partie non vide de <span class="math">\(\N\)</span> admet un plus petit élément</li>
+<li> On notera <span class="math">\([[a;b]]\)</span> l&#8217;intervale d&#8217;entiers allant de a à b <span class="math">\((a &lt; b)\)</span></li>
+<li> Ici, a et b sont 2 entiers, et <span class="math">\([[a;b]] = [a;b] \cap \Z\)</span>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur
-CARLISI Nolan TG04</p>
+<ul>
+<li>Exemple <span class="math">\([[3;7]] = {3,4,5,6,7}\)</span></li>
+</ul></li>
+<li> On definit de la meme façon <span class="math">\(]]a;b[[, [[a;b[[, ]]a;b]].\)</span></li>
+</ul>
 
-<p>Paragraphe argumenté Activité 4 :</p>
+<h2 id="iidivisibilité">II) Divisibilité</h2>
 
-<p>On regardera en premier, l’abondance du silicuim à l’état naturel puis en seconde partie son randement maximal de conversion.</p>
+<h3 id="1définition">1) Définition</h3>
 
-<p>En première partie sa forte abondance dans les éléments chimique dans la croûte terrestre, presque 30% d&#8217;abondance par rapport au galium à 0.00015%, a l&#8217;arséniure à 0.00018%, ou au gallium à 0.0019%.</p>
+<p>a et b étant deux entiers, on dit que <span class="math">\(a\)</span> divise <span class="math">\(b\)</span>, si il exsiste un entier <span class="math">\(k\)</span> tel que <span class="math">\(b = ka\)</span>. On écrit alors <span class="math">\(a|b\)</span></p>
 
-<p>En deuxième partie son haut randement maximal de conversion, qui est de 30% presque à égalité à l&#8217;Arsénuire de gallium, et 2x plus que le Germanuim à 15%, mais aussi son absorption relativement proche de spectre solaire(spectre visible) entre 400 et 1000nm.</p>
+<p><span class="math">\(a|b (1) \exist k\in \Z, b=ka\)</span></p>
 
-<p>On peux conclure que le silicuim est préférantiellement choisi en tant que semi-conducteur grace à sa forte abondance dans la croute terrestre, et son haut randement maximal de conversion.</p>
+<p>Cela se formule également de la façon suivante:</p>
+
+<ul>
+<li> a est un <u>diviseur</u> de b</li>
+<li> b est un <u>multiple</u> de a</li>
+</ul>
+
+<h3 id="2propriétes">2) Propriétes</h3>
+
+<p>Soit
+<span class="math">\(n \in \Z,\)</span> on a <span class="math">\(n= 1*n\)</span> donc <span class="math">\(1|n\)</span> et <span class="math">\(n|n\)</span>
+<span class="math">\(n=-1*(-n)\)</span> donc <span class="math">\(-1|n\)</span> et <span class="math">\(-n|n\)</span></p>
+
+<p><span class="math">\(\forall k \in \Z\)</span>, on a <span class="math">\(0=0*k\)</span>
+<u>Tout les entiers divisent 0</u></p>
+
+<p>On admet le résultat suivant (voir preuve en exercice)
+Tout entier non nul admet un nombre fini de diviseur
+Si <span class="math">\(n \in \Z^*\)</span> et d est un divieur de n, alors <span class="math">\(d \in [[ -|n|; |n|]]\)</span></p>
+
+<p>Par la suite, on notera <span class="math">\(D(n)\)</span> l&#8217;ensembe des diviseurs de n
+Exemple: <span class="math">\(D(6) = \{-6;-3;-2;-1;1; 2; 3; 6\}\)</span></p>
+
+<p>Transitivité: a,b et c etant 3 entiers, si <span class="math">\(a|b\)</span> et <span class="math">\(b|c\)</span> alors <span class="math">\(a|c\)</span></p>
+
+<p>Preuve:
+<span class="math">\(a|b\)</span>, donc <span class="math">\(\exist k \in \Z, b=ka\)</span>
+<span class="math">\(b|c\)</span>, donc <span class="math">\(\exist k' \in \Z, c=k'b\)</span>
+On a alors <span class="math">\(c = k'*(ka) = (k'k)*a\)</span>;
+<span class="math">\(k'k \in \Z\)</span>, donc <span class="math">\(a|c\)</span></p>
+
+<hr />
+
+<p>Prof:
+<span class="math">\(a \in \Z^*, b \in \Z^*\)</span> Montrer que si <span class="math">\(a|b\)</span> et <span class="math">\(b|a\)</span> alors <span class="math">\(|a| = |b|\)</span></p>
+
+<p>On considère 2 entiers a et b non null tels que <span class="math">\(a|b\)</span> et <span class="math">\(b|a\)</span></p>
+
+<p>On a alors
+<span class="math">\(\exist k \in \Z, b = ka\)</span>
+<span class="math">\(\exist k' \in \Z, a = k'b\)</span></p>
+
+<p>on a alors <span class="math">\(a = k'*ka = kk'a\)</span>
+<span class="math">\(kk'a - a = 0\)</span>
+<span class="math">\((kk'-1) * a = 0\)</span>
+<span class="math">\(kk'-1= 0\)</span> ou <span class="math">\(a =0\)</span></p>
+
+<p>On sait que <span class="math">\(a \neq 0\)</span>
+in a donc <span class="math">\(kk' = 1\)</span></p>
+
+<p>k et k' sont des diviseur de 1, ils ne peuvent prendre pour valeur que 1 ou -1</p>
+
+<p>si <span class="math">\(k=1\)</span>: <span class="math">\(b=a\)</span>
+si <span class="math">\(k=-1\)</span>: <span class="math">\(b= -a\)</span></p>
+
+<p><span class="math">\(a \in \Z^*, b \in \Z^*, a|b\text{ et }b|a \Rightarrow |a| = |b|\)</span></p>
+
+<hr />
+
+<h2 id="iiensemblenz">II) Ensemble <span class="math">\(n\Z\)</span></h2>
+
+<p>n n&#8217;etant un entier, on note <span class="math">\(n\Z\)</span> l&#8217;ensemble des multiples de n.
+<span class="math">\(n\Z = \{ kn, k\in\Z\}\)</span>
+De façon immédiate, si <span class="math">\(a \in n\Z\)</span>, alors <span class="math">\(\exist k \in \Z, a = kn \Leftrightarrow n|a\)</span>
+<span class="math">\(a|n\Z \Leftrightarrow n|a\)</span></p>
+
+<p>Stabilité:</p>
+
+<p>Si <span class="math">\(a \in n\Z\)</span> &lt;=&gt; <span class="math">\(n|a\)</span> &lt;=&gt; <span class="math">\(\exist k \in \Z\)</span>, a = kn
+Si <span class="math">\(b \in n\Z\)</span> &lt;=&gt; <span class="math">\(n|b\)</span> &lt;=&gt; <span class="math">\(\exist k' \in \Z\)</span>, b = k&#8217;n</p>
+
+<p>on a alors
+a+b = kn+k&#8217;n = (k+k')n
+Donc a+b \in n\Z</p>
+
+<p>Cela s&#8217;écrit de 2 façon differentes</p>
+
+<p>$$
+n|a; et; n|b \Rightarrow n|(a+b) \
+a \in n\Z \text{ et } b \in n\Z \Rightarrow a+b \in n\Z
+$$</p>
+
+<p>SI <span class="math">\(a \in n\Z\)</span> et <span class="math">\(k \in \Z\)</span></p>
+
+<p><span class="math">\(\exist k' \in \Z\)</span>, a <span class="math">\(k'n\)</span> donc</p>
+
+<p><span class="math">\(ka = kk'\)</span> donc <span class="math">\(ka \in n\Z\)</span></p>
+
+<p>Cela s&#8217;écrit de deux daçons differantes</p>
+
+<p>$$
+n|a; et; k\in Z \Rightarrow n|ka \
+a \in n\Z \text{ et } b \in \Z \Rightarrow ka \in n\Z
+$$</p>
+
+<p>Combinaison linéaire</p>
+
+<p>a et b etant 2 entier tout entier de la forme ka + k&#8217;b, à k \in \Z et k'\in \Z, est une combinaision linéaire de a et b</p>
+
+<hr />
+
+<p>si <span class="math">\(a\in n\Z, b\in n\Z, k \in \Z, k' \in \Z\)</span> alors <span class="math">\(ka + k'b \in n\Z\)</span></p>
+
+<p><span class="math">\(n\Z\)</span> est stable par combinaison linéaire
+Cela s&#8217;écrit aussi:
+<span class="math">\(n|a, n|b, k\in\Z, k'\in\Z \Rightarrow n|(ka+k'b)\)</span>
+<span class="math">\(a\in\Z^*,b \in \Z^*\)</span>
+<span class="math">\(a|b \Leftrightarrow b\Z \sub a\Z\)</span></p>
+
+<p>Preuve:
+Soit <span class="math">\(n\in k\Z\)</span>, alors <span class="math">\(b|n\)</span> or <span class="math">\(a|b\)</span>, donc par <strong>transitivité</strong> <span class="math">\(a|n \Rightarrow n \in a\Z\)</span>
+Ceci étant vrai pout tout n de <span class="math">\(k\Z\)</span>, on a donc <span class="math">\(b\Z \sub a\Z\)</span></p>
+
+<p><em>Réciproque:</em>
+Si <span class="math">\(b\Z \sub a\Z\)</span>
+Or <span class="math">\(b \in b\Z\)</span>, donc <span class="math">\(b\in a\Z\)</span>, donc <span class="math">\(a|b\)</span></p>
+
+<hr />
+
+<h2 id="ivdivisioneuclidienne">IV Division euclidienne</h2>
+
+<p>Soit <span class="math">\(a \in \Z\)</span>, et <span class="math">\(b \in \Z^*\)</span></p>
+
+<p>Il exsiste un unique couple d&#8217;entiers (q; r) tel que</p>
+
+<h2 id="abqr0leqrleqb">| <span class="math">\(a = bq+r; 0 \leq r \leq |b|\)</span></h2>
+
+<p>Cette relation s&#8217;appelle la <u>dicision euclidienne(ou division entière) de a par b</u></p>
+
+<ul>
+<li>q s&#8217;appelle le <u>le quotient entier</u> a par b</li>
+<li>r s&#8217;appelle le <u>le reste modulo b</u></li>
+</ul>
+
+<h5 id="preuve">Preuve</h5>
+
+<p>Preuve: les intervalles d&#8217;entiers de la forme <span class="math">\([[ k|b|; (k+1)|b| [[\)</span> formenet un partition de <span class="math">\(\Z\)</span>, avec <span class="math">\(k \in \Z\)</span></p>
+
+<p>Cala signifie que leurs intersections deux a deux sont vide, et que leur union est égal à <span class="math">\(\Z\)</span></p>
+
+<p>Par conséquent, a appartient à un seul de ces intervalles, que l&#8217;on notera <span class="math">\([[q|b|; (q+1)|b|[[\)</span>
+On a donc <span class="math">\(q|b| \leq a &lt; (q+1)|b|\)</span></p>
+
+<p>Possons <span class="math">\(r = a - q|b|\)</span>, on a alors <span class="math">\(a - q|b| \geq 0\)</span> et <span class="math">\(a-q|b| &lt; |b|\)</span></p>
+
+<p>Donc <span class="math">\(0 \leq r &lt; |b|\)</span></p>
+
+<h5 id="unicité:">Unicité:</h5>
+
+<p>On a <span class="math">\(a=bq+r\)</span>, avec <span class="math">\(0 \leq r &lt; |b|\)</span>
+S&#8217;il exssite un autre couple <span class="math">\((q',r')\)</span> tel que <span class="math">\(a = bq'+r'\)</span> avec <span class="math">\(0\leq r' &lt; |b|\)</span></p>
+
+<p>on a <span class="math">\(r = a-bq\)</span> et <span class="math">\(r'=a-bq'\)</span></p>
+
+<p>Donc <span class="math">\(r-r' = a-bq-a+bq' = b(q'-q)\)</span></p>
+
+<p><span class="math">\(q'-q \in \Z\)</span>
+Si <span class="math">\(q'-q \geq 1\)</span></p>
+
+<p>on a <span class="math">\(0 \leq r &lt; |b|\)</span>
+donc <span class="math">\(-|b| \leq -r' &lt; 0\)</span>
+donc <span class="math">\(-|b| \leq r-r' &lt; |b|\)</span></p>
+
+<p>On a <span class="math">\(q'-q \in \Z\)</span>
+si
+<span class="math">\[q'-q \geq 1 \Rightarrow  |b|*(q'-q) \geq |b| \\
+\Rightarrow  |r-r'| \geq |b|\]</span></p>
+
+<p>imposible par hypothèse</p>
+
+<p>si
+<span class="math">\[q'-q \leq 1 \Rightarrow  |b|*(q'-q) \leq - |b| \\
+\Rightarrow  -|r-r'| \leq - |b|
+\Rightarrow  |r-r'| \geq |b|\]</span></p>
+
+<p>donc <span class="math">\(q'-q = 0 \Rightarrow q'=q\)</span></p>
+
+<p>or <span class="math">\(r-r' = b(q'-q) = 0 \Rightarrow r=r'\)</span></p>
+
+<p>Il y a donc unicité de la division euclidienne</p>
+
+<h2 id="vcongruence">V) Congruence</h2>
+
+<h3 id="1défninition">1) Défninition</h3>
+
+<p>Deux entiers a et b sont <u>congures modulo</u> n <span class="math">\((n \in \N)\)</span> si leur differences est un multiple de n.
+on écrit alors <span class="math">\(a \equiv b(n)\)</span></p>
+
+<h2 id="aequivbnleftrightarrowb-ainnzleftrightarrownb-a">| <span class="math">\(a \equiv b(n) \Leftrightarrow b-a \in n\Z \\ \Leftrightarrow n|b-a\)</span></h2>
+
+<p>Conséqance: tout entier a est congrue à son reste modulo n</p>
+
+<p>En enffet, la division euclidienne de a par n s&#8217;écrit</p>
+
+<p><span class="math">\(a = nq+r\)</span> <span class="math">\(0 \leq r &lt; n\)</span>
+<span class="math">\(a-r = nq\)</span></p>
+
+<p>donc <span class="math">\(n | a-r \Leftrightarrow a \equiv r(n)\)</span></p>
+
+<h3 id="2propriétés">2) Propriétés</h3>
+
+<h2 id="siainzaequivanlarelationestréflexive">| Si <span class="math">\(a \in \Z, a \equiv a(n)\)</span> (la relation est réflexive)</h2>
+
+<p><span class="math">\(a - a = 0 = 0 \times n\)</span></p>
+
+<p>donc <span class="math">\(n|a-a \Rightarrow a \equiv a(n)\)</span></p>
+
+<h2 id="aetbétant2entierssiaequivbnalorsbequivbequivanlarelationestsymétrique">a et b étant 2 entiers,
+| si <span class="math">\(a \equiv b(n)\)</span> alors <span class="math">\(b \equiv b \equiv a(n)\)</span> (la relation est symétrique)</h2>
+
+<p>Preuve: <span class="math">\(a \equiv b(n) \Rightarrow n | b-a\)</span>
+<span class="math">\(\Rightarrow n | (b-a) \times (-1)\)</span>
+<span class="math">\(\Rightarrow n | a-b\)</span></p>
+
+<p><span class="math">\(\Rightarrow a \equiv a(n)\)</span></p>
+
+<h2 id="siabetc3entierssiaequivbnetbequivcnalorsaequivcnlarelationesttransitive">Si a, b et c, 3 entiers
+| si <span class="math">\(a \equiv b(n)\)</span> et <span class="math">\(b \equiv c(n)\)</span> alors <span class="math">\(a \equiv c(n)\)</span> (la relation est transitive)</h2>
+
+<p>Preuve:
+<span class="math">\(a \equiv b(n) \Rightarrow n | b-a\)</span>
+<span class="math">\(b \equiv c(n) \Rightarrow n | c-b\)</span></p>
+
+<p>Alors <span class="math">\(n| (b-a) + (c-b)\)</span>
+<span class="math">\(\Rightarrow n | (c-a)\)</span>
+<span class="math">\(\Rightarrow n | a \equiv c(n)\)</span></p>
+
+<p><strong><u>Compatibilité avec l&#8217;addition</u></strong></p>
+
+<p>Si a, b, a', b' sont 4 entiers</p>
+
+<p><span class="math">\[a \equiv b(n) \Rightarrow \\
+a' \equiv b'(n) \Rightarrow \\
+\\
+a + a' \equiv b + b'(n)\]</span></p>
+
+<p>Preuve:</p>
+
+<p><span class="math">\(a \equiv b(n) \Rightarrow n | b-a\}\)</span>
+<span class="math">\(a' \equiv b'(n) \Rightarrow n | b'-a'\}\)</span></p>
+
+<p><span class="math">\(\Rightarrow n | (b-a)+(b'-a')\)</span>
+<span class="math">\(\Rightarrow n | (b-b')-(a+a')\)</span></p>
+
+<p><span class="math">\(\Rightarrow a+a' \equiv b + b'(n)\)</span>
+Alors <span class="math">\(a + a' \equiv b + b'(n)\)</span></p>
+
+<p><strong><u>Compatibilité avec la multiplication</u></strong></p>
+
+<p>Si a, b et c sont 3 entiers</p>
+
+<p>Si
+<span class="math">\[a \equiv b(n) \; alors \; ac \equiv bc(n)\]</span></p>
+
+<p>Preuve:</p>
+
+<p><span class="math">\(a \equiv b(n) \Rightarrow n | b-a\)</span></p>
+
+<p><span class="math">\(\Rightarrow \exist k \in \Z, b-a = nk\)</span>
+<span class="math">\(\Rightarrow c(b-a)=nkc\)</span>
+<span class="math">\(\Rightarrow bc-ac = n \times (kc)\)</span>
+<span class="math">\(\Rightarrow n|bc-ac\)</span>
+<span class="math">\(\Rightarrow ac\equiv bc(n)\)</span></p>
+
+<h2 id="parconséquentababetant4entierssiaequivbnetaequivbnalorsaaequivbbn">Par conséquent, a, b, a', b' etant 4 entiers
+| si <span class="math">\(a \equiv b(n)\)</span> et <span class="math">\(a' \equiv b'(n) \;alors\; aa' \equiv bb'(n)\)</span></h2>
+
+<p>Preuve:</p>
+
+<p><span class="math">\(a \equiv b(n) \Rightarrow aa' \equiv ba'(n)\)</span>
+<span class="math">\(a' \equiv b'(n) \Rightarrow ba' \equiv bb'(n)\)</span>
+Donc par transitivité, <span class="math">\(aa' \equiv bb'(n)\)</span></p>
+
+<p>Conséquence: a et b étant 2 entiers et <span class="math">\(p \in \N\)</span></p>
+
+<h2 id="siaequivbnalorsapequivbpn">| Si <span class="math">\(a \equiv b(n) alors a^p \equiv b^p(n)\)</span></h2>
+
+<p>Preuve par récurence</p>
+
+<p><span class="math">\(P(p); a^p \ equiv b^p(n)\)</span></p>
+
+<p>Init: p = 0</p>
+
+<p><span class="math">\(a^0 = 1\)</span>, <span class="math">\(b^0 =1\)</span> donc
+<span class="math">\(1 \equiv 1(n) \; donc\; a^0 \equiv b^0(n)\)</span></p>
+
+<p>P(0) est vrai</p>
+
+<p>Hérédité</p>
+
+<p><span class="math">\(P_n \Rightarrow a^p \equiv b^p(n)\)</span>
+or <span class="math">\(a \equiv b(n)\)</span>, donc
+<span class="math">\(a^p * a \equiv b^p * b(n)\)</span>
+Donc : <span class="math">\(a^{p+1} \equiv b^{p+1}(n),\)</span> donc <span class="math">\(P_{p+1} vraie\)</span></p>
+
+<p>Conclusion : <span class="math">\(\forall p \in \N, a^p \equiv b^p(n)\)</span></p>
+
+<p>Remarque:</p>
+
+<h2 id="aequiv0nleftrightarrowna">| <span class="math">\(a \equiv 0(n) \Leftrightarrow n|a\)</span></h2>
+
+<h2 id="vicritairededivisibilité">VI Critaire de divisibilité</h2>
+
+<p>On note N= [1&#8230;] l&#8217;écriture en base 10 du nombre N</p>
+
+<p>Les &#8220;a&#8221; sont des chiffres, donc il appartienent à <span class="math">\([[0;9]]\)</span></p>
+
+<p>[2&#8230;]</p>
+
+<h3 id="par10">Par 10</h3>
+
+<p>10|N &lt;=&gt; a_0 = 0</p>
+
+<p>Preuve:
+[4&#8230;]</p>
+
+<p>[5&#8230;]</p>
+
+<p>[3&#8230;]</p>
+
+</body>
+</html>
+
 
 </body>
 </html>
