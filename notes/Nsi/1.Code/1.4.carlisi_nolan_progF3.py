@@ -153,3 +153,8 @@ if __name__ == "__main__": # {{{1
     print("C'est la fin")
 
 
+def hello_world():
+    """Print Hello world"""
+    print("Hello world")
+
+

@@ -7,6 +7,8 @@
 # ┃ Exercice fiche 1                            ┃
 # ┖━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
+def transpose():
+    """Create a transposed of table"""
 def Exo1():
     txt = input("Votre texte : ")
     n = int(input("Votre entier : "))
