@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Titre de la page</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<style>
+		body{
+			background-color: #242424;
+			color: white;
+			font-family: "Gill Sans", sans-serif;
+		}
+	</style>
+		
+</head>
+<body>
+<p>class JeuVideo:
+def <strong>init</strong>(self, titre, plateformes, multijoueur):
+self.titre  = titre
+self.plateformes = plateformes
+self.multijoueur = multijoueur
+def addPlateforme(self, plateforme):
+if not(plateforme in self.plateformes):
+self.plateformes.append(plateforme)
+def removePlateforme(self, plateforme):
+if plateforme in self.plateformes:
+self.plateformes.remove(plateforme)
+def isOnPlateforme(self, plateforme):
+return plateforme in self.plateformes
+def isMultijoueur(self):
+return self.multijoueur
+def <strong>str</strong>(self):
+texteAffichage = self.titre + &#8220;\n&#8221;
+texteAffichage += &quot;Multijoueur : &quot; + str(self.isMultijoueur()) + &#8220;\n&#8221;
+texteAffichage += &quot;Plateformes : &quot; + str(self.plateformes) + &#8220;\n&#8221;
+return texteAffichage</p>
+
+<p>mario64 = JeuVideo(&#8220;Mario 64&#8221;, [&#8220;N64&#8221;, &#8220;DS&#8221;, &#8220;Switch&#8221;], False)
+print(mario64.titre)
+print(mario64.isMultijoueur())
+print(mario64.addPlateforme(&#8220;PS4&#8221;))
+print(mario64.plateformes)
+print(mario64.isOnPlateforme(&#8220;Switch&#8221;))
+print(mario64.removePlateforme(&#8220;PS4&#8221;))
+print(mario64.isOnPlateforme(&#8220;PS4&#8221;))</p>
+
+<p>mario64 = JeuVideo(&#8220;Mario 64&#8221;, [&#8220;N64&#8221;, &#8220;DS&#8221;, &#8220;Switch&#8221;], False)
+print(mario64)</p>
+
+<h2 id="queletypecestunobjetaupointeur0x7f05c540ef40devaleur139662760931136">Que le type c&#8217;est un objet au pointeur 0x7f05c540ef40 de valeur 139662760931136</h2>
+
+<h2 id="bahmaintenantsaleprintnormalement">Bah maintenant sa le print normalement</h2>
+
+</body>
+</html>
